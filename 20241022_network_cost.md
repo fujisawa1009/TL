@@ -1,7 +1,7 @@
 項目
 ・【完了】SQL Server 2008 R2のService Pack 1 (SP1)と互換性のあるSQL Serverのバージョン調査
-・SQL Server 2008 R2のService Pack 1 (SP1)と互換性のあるMySQLサーバのバージョン調査
-・SQLサーバのデータ量を期間集計するSQL Server Profiler
+・【完了】SQL Server 2008 R2のService Pack 1 (SP1)と互換性のあるMySQLサーバのバージョン調査
+・【まだ】SQLサーバのデータ量を期間集計するSQL Server Profiler
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 ■SQL Server 2008 R2のService Pack 1 (SP1)と互換性のあるSQL Serverのバージョン調査
 
