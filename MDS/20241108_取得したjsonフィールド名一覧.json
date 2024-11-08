@@ -1,0 +1,5324 @@
+{
+    "revision": "639",
+    "properties": {
+        "原状復帰依頼票添付": {
+            "type": "FILE",
+            "code": "原状復帰依頼票添付",
+            "label": "原状復帰依頼票添付欄",
+            "noLabel": false,
+            "required": false,
+            "thumbnailSize": "150"
+        },
+        "工事希望日_第一希望": {
+            "type": "DATE",
+            "code": "工事希望日_第一希望",
+            "label": "工事希望日_第一希望",
+            "noLabel": false,
+            "required": false,
+            "unique": false,
+            "defaultValue": "",
+            "defaultNowValue": false
+        },
+        "開通案内発送日": {
+            "type": "DATE",
+            "code": "開通案内発送日",
+            "label": "開通案内発送日",
+            "noLabel": false,
+            "required": false,
+            "unique": false,
+            "defaultValue": "",
+            "defaultNowValue": false
+        },
+        "申込関連書類添付欄_速トク": {
+            "type": "FILE",
+            "code": "申込関連書類添付欄_速トク",
+            "label": "申込関連書類添付欄（速トク用）",
+            "noLabel": false,
+            "required": false,
+            "thumbnailSize": "50"
+        },
+        "NTT注文入力担当者CD": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "NTT注文入力担当者CD",
+            "label": "NTT注文S　入力担当者CD",
+            "noLabel": false,
+            "required": false,
+            "lookup": null
+        },
+        "新規獲得_連絡担当者": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "新規獲得_連絡担当者",
+            "label": "新規獲得_連絡担当者",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "ステータス": {
+            "type": "STATUS",
+            "code": "ステータス",
+            "label": "ステータス",
+            "enabled": false
+        },
+        "工事費月々割": {
+            "type": "RADIO_BUTTON",
+            "code": "工事費月々割",
+            "label": "工事費月々 割",
+            "noLabel": false,
+            "required": true,
+            "options": {
+                "150円（転用時の選択は厳禁）": {
+                    "label": "150円（転用時のA選択は厳禁）",
+                    "index": "1"
+                },
+                "650円": {
+                    "label": "650円",
+                    "index": "0"
+                }
+            },
+            "defaultValue": "650円",
+            "align": "VERTICAL"
+        },
+        "回収ステータス": {
+            "type": "DROP_DOWN",
+            "code": "回収ステータス",
+            "label": "回収 ステータス",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "12.オーソリNG（カード）": {
+                    "label": "12.オーソリNG（カード）",
+                    "index": "4"
+                },
+                "33.【選択禁 止】その他（既存Tabal合算）": {
+                    "label": "33.【選択禁止】その他（既存Tabal合算）",
+                    "index": "15"
+                },
+                "24.その他（既存口座合算）": {
+                    "label": "24.その他（ 既存口座合算）",
+                    "index": "10"
+                },
+                "30.【選択禁止】Tabal申請済み": {
+                    "label": "30.【選択禁止】Tabal申請済み",
+                    "index": "12"
+                },
+                "21.銀行提出済み（口座）": {
+                    "label": "21.銀行提出済み（口座）",
+                    "index": "7"
+                },
+                "99.【選択禁止】その他（振込票）": {
+                    "label": "99.【選択禁止】その他（振込票）",
+                    "index": "16"
+                },
+                "25.書類到着待ち（2週間以上経過）": {
+                    "label": "25.書類到着待ち（2週間以上経過）",
+                    "index": "11"
+                },
+                "22.到着後不備あり（口座）": {
+                    "label": "22.到着後不備あり （口座）",
+                    "index": "8"
+                },
+                "23.銀行不備あり（口座）": {
+                    "label": "23.銀行不備あり（口座）",
+                    "index": "9"
+                },
+                "00.未回収（留守含む）": {
+                    "label": "00.未回収（ 留守含む）",
+                    "index": "0"
+                },
+                "32.【選択禁止】TabalNG": {
+                    "label": "32.【選択禁止】TabalNG",
+                    "index": "14"
+                },
+                "20.書類到着待ち（カード or 口座）": {
+                    "label": "20.書類到着待ち（カード or 口座）",
+                    "index": "6"
+                },
+                "31.【選択禁止】TabalOK": {
+                    "label": "31.【選択禁止】TabalOK",
+                    "index": "13"
+                },
+                "11.オーソリOK（カー ド）": {
+                    "label": "11.オーソリOK（カード）",
+                    "index": "3"
+                },
+                "10.ヒアリングOK（カード）": {
+                    "label": "10.ヒアリングOK（カード）",
+                    "index": "2"
+                },
+                "13.その他 （既存カード合算）": {
+                    "label": "13.その他（既存カード合算）",
+                    "index": "5"
+                },
+                "01.未回収（対応中）": {
+                    "label": "01.未回収（対応中）",
+                    "index": "1"
+                }
+            },
+            "defaultValue": "00.未回収（留守含む）"
+        },
+        "担当者名": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "担当者名",
+            "label": "担当者名",
+            "noLabel": false,
+            "required": true,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "building": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "building",
+            "label": "契約者_マンション名・部屋番号",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "WEBROOT追加": {
+            "type": "DROP_DOWN",
+            "code": "WEBROOT追加",
+            "label": "WEBROOT追加",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "2ライセンス追加": {
+                    "label": "2ライセンス追加",
+                    "index": "1"
+                },
+                "1ライセンス追加": {
+                    "label": "1ライセンス追加",
+                    "index": "0"
+                },
+                "3ライセンス追加": {
+                    "label": "3ライセンス追加",
+                    "index": "2"
+                },
+                "4ライセンス追加": {
+                    "label": "4ライセンス追加",
+                    "index": "3"
+                },
+                "5ライセンス追加": {
+                    "label": "5ライセンス追加",
+                    "index": "4"
+                }
+            },
+            "defaultValue": ""
+        },
+        "第二希望日_工事予定時間帯": {
+            "type": "DROP_DOWN",
+            "code": "第二希望日_工事予定時間帯",
+            "label": "第二希望日_工事予定時間帯",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "午後フリー": {
+                    "label": "午後フリー",
+                    "index": "1"
+                },
+                "午前フリー": {
+                    "label": " 午前フリー",
+                    "index": "0"
+                }
+            },
+            "defaultValue": ""
+        },
+        "利停ステータス": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "利停ステータス",
+            "label": "利停ステータス",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "契約者名屋 号カナ": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "契約者名屋号カナ",
+            "label": "契約者名屋号カナ（法人のみ）",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "契約開始日": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "契約開始日",
+            "label": "契約開始日",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "サービス名_追加廃止": {
+            "type": "SUBTABLE",
+            "code": "サービス名_追加廃止",
+            "noLabel": true,
+            "label": "サービス名_追加廃止",
+            "fields": {
+                "追加廃止_サービス名備考": {
+                    "type": "SINGLE_LINE_TEXT",
+                    "code": "追加廃止_サービス名備考",
+                    "label": "サービス名_備考",
+                    "noLabel": false,
+                    "required": false,
+                    "minLength": "",
+                    "maxLength": "",
+                    "expression": "",
+                    "hideExpression": false,
+                    "unique": false,
+                    "defaultValue": ""
+                },
+                "追加廃止_サービス名追加日": {
+                    "type": "DATE",
+                    "code": "追加廃止_サービス名追加日",
+                    "label": "サービス名_追加日",
+                    "noLabel": false,
+                    "required": false,
+                    "unique": false,
+                    "defaultValue": "",
+                    "defaultNowValue": false
+                },
+                "追加廃止_サービス名": {
+                    "type": "DROP_DOWN",
+                    "code": "追加廃止_サービス名",
+                    "label": "サービス名",
+                    "noLabel": false,
+                    "required": false,
+                    "options": {
+                        "ひかり速トク ファミリープラン（ひかり速トク）": {
+                            "label": "ひかり速トク ファミリープラン（ひかり速トク）",
+                            "index": "0"
+                        },
+                        "ひかり速 トク マンション・ハイスピードプラン2（ひかり速トク）": {
+                            "label": "ひかり速トク マンション・ハイスピードプラン2（ひかり速トク）",
+                            "index": "10"
+                        },
+                        "FT光 マンション・ハイスピードタイプ1（3100）（FT光）": {
+                            "label": "FT光 マンション・ハイスピードタイプ1（3100）（FT光）",
+                            "index": "40"
+                        },
+                        "FT光 マンシ ョン・ハイスピードタイプ2（2800）（FT光）": {
+                            "label": "FT光 マンション・ハイスピードタイプ2（2800）（FT光）",
+                            "index": "53"
+                        },
+                        "ひかり速トク マンション・ギガプランミニ（ひかり速トク）": {
+                            "label": "ひかり速トク マンション・ギガプランミニ（ひかり速トク）",
+                            "index": "5"
+                        },
+                        "ひかり速トク マンションプ ラン2（ひかり速トク）": {
+                            "label": "ひかり速トク マンションプラン2（ひかり速トク）",
+                            "index": "9"
+                        },
+                        "FT光 ファミリー・ハイスピードタイプ（4000）（FT 光）": {
+                            "label": "FT光 ファミリー・ハイスピードタイプ（4000）（FT光）",
+                            "index": "18"
+                        },
+                        "FT光 マンション・ハイスピードタイプ1（2930）（FT光）": {
+                            "label": "FT光 マンション・ハイスピードタイプ1（2930）（FT光）",
+                            "index": "43"
+                        },
+                        "FT光 ファミリー・ハイスピードタイプ（3610）（FT光）": {
+                            "label": "FT光  ファミリー・ハイスピードタイプ（3610）（FT光）",
+                            "index": "19"
+                        },
+                        "FT光 ファミリータイプ（4200）（FT光）": {
+                            "label": "FT光 ファミリータイプ（4200）（FT光）",
+                            "index": "13"
+                        },
+                        "FT光 マンションタイプ1（3000）（FT光）": {
+                            "label": "FT光 マンションタイプ1（3000）（FT光）",
+                            "index": "37"
+                        },
+                        "FT光 マンションタイプ2（2530）（FT光）": {
+                            "label": "FT光 マンションタイプ2（2530）（FT光）",
+                            "index": "51"
+                        },
+                        "FT光 マンション・ギガラインタイプミニ（3400）（FT光）": {
+                            "label": "FT光 マンション・ギガラインタイプミニ（3400）（FT光）",
+                            "index": "32"
+                        },
+                        "ひかり速トク マンション・ギガプラン2（ひかり速トク）": {
+                            "label": "ひかり速トク マンション・ギガプラン2（ひかり速トク）",
+                            "index": "11"
+                        },
+                        "FT光 ファミリータイプ（4400）（FT光）": {
+                            "label": "FT光 ファミリータイプ （4400）（FT光）",
+                            "index": "12"
+                        },
+                        "光ギガファミリータイプ53（光ギガ）": {
+                            "label": "光ギガファミリータイプ53（光ギガ）",
+                            "index": "63"
+                        },
+                        "ひかり速トク ファミリー・ハイスピードプラン（ひかり速トク）": {
+                            "label": "ひかり速トク ファミリー・ハイスピードプラン（ひかり速トク）",
+                            "index": "1"
+                        },
+                        "ひかり速トク ファミリー・ギガプラン（ひかり速トク）": {
+                            "label": "ひかり速トク ファミリー・ギガプラン（ひかり速トク）",
+                            "index": "2"
+                        },
+                        "FT光 ファミリー・ギガラインタイプ（4400）（FT光）": {
+                            "label": "FT光 ファミリー・ギガラインタイプ（4400）（FT光）",
+                            "index": "20"
+                        },
+                        "FT光 マンションタイプ2（2750）（FT光）": {
+                            "label": "FT光 マンションタイプ2（2750）（FT光）",
+                            "index": "50"
+                        },
+                        "FT光 マンション・ギガラインタイプミニ（3420）（FT光）": {
+                            "label": "FT光 マンシ ョン・ギガラインタイプミニ（3420）（FT光）",
+                            "index": "35"
+                        },
+                        "FT光 マンション・ギガラインタイプ1（2930）（FT光）": {
+                            "label": "FT光 マンション・ギガ ラインタイプ1（2930）（FT光）",
+                            "index": "47"
+                        },
+                        "FT光 マンションタイプミニ（3420）（FT光）": {
+                            "label": "FT光 マンションタイプミニ（3420）（FT光）",
+                            "index": "27"
+                        },
+                        "ひかり速トク マンション・ギガプラン1（ひかり速トク）": {
+                            "label": "ひかり速トク マンション・ギガプラン1（ひかり速トク）",
+                            "index": "8"
+                        },
+                        "FT光 マンション・ギガラインタイプ2（2800）（FT光）": {
+                            "label": "FT光 マンション・ギガラインタイプ2（2800）（FT光）",
+                            "index": "57"
+                        },
+                        "FT光 マンション・ギガラインタイプミニ（3200）（FT光）": {
+                            "label": "FT光 マンション・ギガラインタイプミニ（3200）（FT光）",
+                            "index": "33"
+                        },
+                        "FT光 マンションタイプミニ（3200）（FT光）": {
+                            "label": "FT光 マンションタイプミニ（3200）（FT光）",
+                            "index": "25"
+                        },
+                        "FT光 マンションタイプ2（2800）（FT光）": {
+                            "label": "FT光 マンションタイプ2（2800）（FT光）",
+                            "index": "49"
+                        },
+                        "光ギガマンションタイプ42（光ギガ）": {
+                            "label": "光ギガマンションタイプ42（光ギガ）",
+                            "index": "64"
+                        },
+                        "FT光 マンション・ギガラインタイプミニ（3000）（FT光）": {
+                            "label": "FT光 マンション・ギガラインタイプミニ（3000）（FT光）",
+                            "index": "34"
+                        },
+                        "FT光 マンション・ギガラインタイプ2（2530）（FT光）": {
+                            "label": "FT光 マンション・ギガラインタイプ2（2530）（FT光）",
+                            "index": "59"
+                        },
+                        "FT光 マンショ ン・ギガラインタイプ1（3100）（FT光）": {
+                            "label": "FT光 マンション・ギガラインタイプ1（3100）（FT光）",
+                            "index": "44"
+                        },
+                        "ひかり速トク マンションプラン1（ひかり速トク）": {
+                            "label": "ひかり速トク マンションプラン1（ひかり速トク）",
+                            "index": "6"
+                        },
+                        "FT光 マンションタイプミニ（3000）（FT光）": {
+                            "label": "FT光 マンションタイプミニ（3000）（FT光）",
+                            "index": "26"
+                        },
+                        "ひかり速トク マンション・ハイスピードプラン1（ひかり速トク）": {
+                            "label": "ひかり速トク マンション・ハイスピードプラン1（ひかり速トク）",
+                            "index": "7"
+                        },
+                        "FT光 ファミリー・ギガラインタイプ（3610）（FT光）": {
+                            "label": "FT光 ファミリー ・ギガラインタイプ（3610）（FT光）",
+                            "index": "23"
+                        },
+                        "FT光 マンション・ハイスピードタイプ2（2900）（FT光）": {
+                            "label": "FT光 マンション・ハイスピー ドタイプ2（2900）（FT光）",
+                            "index": "52"
+                        },
+                        "FT光 マンション・ハイスピードタイプ2（2530）（FT光）": {
+                            "label": "FT光 マンション・ハイスピードタイプ2 （2530）（FT光）",
+                            "index": "55"
+                        },
+                        "光ギガマンションタイプ34（光ギガ）": {
+                            "label": "光ギガマンションタイプ34（光ギガ）",
+                            "index": "62"
+                        },
+                        "FT光 マンションタイプ1（2930）（FT光）": {
+                            "label": "FT光 マンションタイプ1（2930）（FT光）",
+                            "index": "39"
+                        },
+                        "FT光 マンションタイプ1（2900）（FT光）": {
+                            "label": "FT光 マンションタイプ1（2900）（FT光）",
+                            "index": "38"
+                        },
+                        "FT光 マンション・ハイスピードタイプ2（2750）（FT光）": {
+                            "label": "FT光 マンション・ハイスピードタイプ2（2750）（FT光）",
+                            "index": "54"
+                        },
+                        "FT光 マンション・ギガラインタイプ2（2750）（FT光）": {
+                            "label": "FT光 マンション・ギガラインタイプ2（2750）（FT光）",
+                            "index": "58"
+                        },
+                        "FT光 マンションタイプ1（3100）（FT光）": {
+                            "label": "FT光 マンションタイプ1（3100）（FT光）",
+                            "index": "36"
+                        },
+                        "FT光 マ ンションタイプミニ（3400）（FT光）": {
+                            "label": "FT光 マンションタイプミニ（3400）（FT光）",
+                            "index": "24"
+                        },
+                        "FT光 マンション・ハイスピードタイプミニ（3000）（FT光）": {
+                            "label": "FT光 マンション・ハイスピードタイプミニ（3000）（FT光）",
+                            "index": "30"
+                        },
+                        "FT光 マンション・ギガラインタイプ2（2900） （FT光）": {
+                            "label": "FT光 マンション・ギガラインタイプ2（2900）（FT光）",
+                            "index": "56"
+                        },
+                        "FT光 マンション・ハイスピードタイプミニ（3200）（FT光）": {
+                            "label": "FT光 マンション・ハイスピードタイプミニ（3200）（FT光）",
+                            "index": "29"
+                        },
+                        "FT光 ファミリー・ギガラインタイプ（4200）（FT光）": {
+                            "label": "FT光 ファミリー・ギガラインタイプ（4200）（FT光）",
+                            "index": "21"
+                        },
+                        "光ギガファミリータイプ44（光ギガ）": {
+                            "label": "光ギガファミリータイプ44（光ギガ）",
+                            "index": "61"
+                        },
+                        "FT光 マンション・ハイスピードタイプミニ（3400）（FT光）": {
+                            "label": "FT光 マンション・ハイスピードタイプミニ（3400）（FT光）",
+                            "index": "28"
+                        },
+                        "FT光 マンション・ギガラインタイプ1（2900）（FT光）": {
+                            "label": "FT光 マンション・ギガラインタイプ1（2900）（FT光）",
+                            "index": "46"
+                        },
+                        "FT光 ファミリー・ハイスピードタイプ（4400）（FT光）": {
+                            "label": "FT光 ファミリー・ハイスピードタイプ（4400）（FT光）",
+                            "index": "16"
+                        },
+                        "FT光 ファミリー・ギガラインタイプ（4000）（FT光）": {
+                            "label": "FT光 ファミリー・ギガラインタイプ（4000）（FT光）",
+                            "index": "22"
+                        },
+                        "FT光 マンション・ハイスピードタイプミニ（3420）（FT光）": {
+                            "label": "FT光 マンション・ハイスピードタイプミニ（3420）（FT光）",
+                            "index": "31"
+                        },
+                        "FT光 ファミリー・ハイスピードタイプ（4200）（FT光）": {
+                            "label": "FT光 ファミリー・ハイスピードタイプ（4200）（FT光）",
+                            "index": "17"
+                        },
+                        "FT光 マンション・ハイスピードタイプ1（2900）（FT光）": {
+                            "label": "FT光 マンション・ハイスピードタイプ1（2900）（FT光）",
+                            "index": "42"
+                        },
+                        "FT光 マンションタイプ2（2900）（FT光）": {
+                            "label": "FT光 マンションタイプ2（2900）（FT光）",
+                            "index": "48"
+                        },
+                        "FT光 ファミリータイプ（4000）（FT光）": {
+                            "label": "FT光 ファミリータイプ（4000）（FT光）",
+                            "index": "14"
+                        },
+                        "FT光 マンション・ギガラインタイプ1（3000）（FT光）": {
+                            "label": "FT光 マンション・ギガラインタイプ1（3000）（FT光）",
+                            "index": "45"
+                        },
+                        "ひかり速トク マンション・ハイスピードプランミニ（ひかり速トク）": {
+                            "label": "ひかり速トク マンション・ハイスピードプランミニ（ひかり速トク）",
+                            "index": "4"
+                        },
+                        "FT光 マンション・ハイスピードタイプ1（3000）（FT光）": {
+                            "label": "FT光 マンション・ハイスピードタイプ1（3000）（FT光）",
+                            "index": "41"
+                        },
+                        "ひかり速トク マンションプランミニ（ひかり速トク）": {
+                            "label": "ひかり速トク マンションプランミニ（ひかり速トク）",
+                            "index": "3"
+                        },
+                        "FT光 ファミリー タイプ（3610）（FT光）": {
+                            "label": "FT光 ファミリータイプ（3610）（FT光）",
+                            "index": "15"
+                        },
+                        "その他": {
+                            "label": "その他",
+                            "index": "60"
+                        }
+                    },
+                    "defaultValue": ""
+                },
+                "追加廃止_サービス名解約日": {
+                    "type": "DATE",
+                    "code": "追加廃止_サービス名解約日",
+                    "label": "サービス名_解約日",
+                    "noLabel": false,
+                    "required": false,
+                    "unique": false,
+                    "defaultValue": "",
+                    "defaultNowValue": false
+                }
+            }
+        },
+        "転用予定日": {
+            "type": "DATE",
+            "code": "転用予定日",
+            "label": "転用予定日",
+            "noLabel": false,
+            "required": false,
+            "unique": false,
+            "defaultValue": "",
+            "defaultNowValue": false
+        },
+        "利用者名": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "利用者名",
+            "label": "利用者名",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "セットプラン": {
+            "type": "CHECK_BOX",
+            "code": "セットプラン",
+            "label": "セットプラン",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "セットプラン有": {
+                    "label": "セットプラン有",
+                    "index": "0"
+                }
+            },
+            "defaultValue": [],
+            "align": "HORIZONTAL"
+        },
+        "利用年月数": {
+            "type": "DROP_DOWN",
+            "code": "利用年月数",
+            "label": "携帯利用年月数",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "1年以上2年未満": {
+                    "label": "1年以上2年未満",
+                    "index": "1"
+                },
+                "その他(営コメに入力)": {
+                    "label": "その他(営コメに入力)",
+                    "index": "4"
+                },
+                "3年以上": {
+                    "label": "3年以上",
+                    "index": "3"
+                },
+                "1年未満": {
+                    "label": "1年未満",
+                    "index": "0"
+                },
+                "2年以上3年未満": {
+                    "label": "2年以上3年未満",
+                    "index": "2"
+                }
+            },
+            "defaultValue": ""
+        },
+        "転用番号_支払方法": {
+            "type": "DROP_DOWN",
+            "code": "転用番号_支払方法",
+            "label": "転用_支払方法",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "クレジットカード": {
+                    "label": "クレジットカード",
+                    "index": "2"
+                },
+                "口座振替": {
+                    "label": "口座振替",
+                    "index": "1"
+                },
+                "請求書": {
+                    "label": "請求書",
+                    "index": "0"
+                }
+            },
+            "defaultValue": ""
+        },
+        "契約者情報グループ": {
+            "type": "GROUP",
+            "code": "契約者情報グループ",
+            "label": "4.契約者情報",
+            "noLabel": false,
+            "openGroup": true
+        },
+        "担当者CD": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "担当者CD",
+            "label": "担当者CD",
+            "noLabel": false,
+            "required": true,
+            "lookup": null
+        },
+        "新規獲得_派遣工事費": {
+            "type": "DROP_DOWN",
+            "code": "新規獲得_派遣工事費",
+            "label": "新規獲得_派遣工事費",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "派遣工事": {
+                    "label": "派遣工事",
+                    "index": "0"
+                },
+                "無派遣工事": {
+                    "label": "無派遣工事",
+                    "index": "1"
+                }
+            },
+            "defaultValue": ""
+        },
+        "ISP開通日": {
+            "type": "DATE",
+            "code": "ISP開通日",
+            "label": "ISP開通日",
+            "noLabel": false,
+            "required": false,
+            "unique": false,
+            "defaultValue": "",
+            "defaultNowValue": false
+        },
+        "転用情報_金融機関名": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "転用情報_金融機関名",
+            "label": "転用_金融機関名（口座振替）",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "name_3": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "name_3",
+            "label": "設置場所担当者（任意）",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "契約ID": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "契約ID",
+            "label": "お客さまID（COP or CAF番号）",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "13",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "name_2": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "name_2",
+            "label": "開通案内担当者（任意）",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "速トクひかり電話工事費": {
+            "type": "DROP_DOWN",
+            "code": "速トクひか り電話工事費",
+            "label": "速トクひかり電話工事費",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "番号新設工事": {
+                    "label": "番号新設工事",
+                    "index": "0"
+                },
+                "番ポ工事": {
+                    "label": "番ポ工事",
+                    "index": "1"
+                }
+            },
+            "defaultValue": ""
+        },
+        "第二連絡先区分": {
+            "type": "DROP_DOWN",
+            "code": "第二連絡先区分",
+            "label": "第二連絡 先区分",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "勤務先": {
+                    "label": "勤務先",
+                    "index": "1"
+                },
+                "自宅": {
+                    "label": "自宅",
+                    "index": "0"
+                },
+                "その他": {
+                    "label": "その他",
+                    "index": "2"
+                }
+            },
+            "defaultValue": ""
+        },
+        "メールアドレス": {
+            "type": "LINK",
+            "code": "メールアドレス",
+            "label": "メールアドレス",
+            "noLabel": false,
+            "required": false,
+            "protocol": "MAIL",
+            "minLength": "",
+            "maxLength": "",
+            "unique": false,
+            "defaultValue": ""
+        },
+        "レンタル機器名称": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "レンタル機器名称",
+            "label": "レンタル機器名称",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "メールアドレス追加": {
+            "type": "DROP_DOWN",
+            "code": "メールアドレス追加",
+            "label": "メールアドレス追加",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "3アドレス追加": {
+                    "label": "3アドレス追加",
+                    "index": "2"
+                },
+                "1アドレス追加": {
+                    "label": "1アドレス追加",
+                    "index": "0"
+                },
+                "4アドレス追加": {
+                    "label": "4アドレス追加",
+                    "index": "3"
+                },
+                "5アドレス追加": {
+                    "label": "5アドレス追加",
+                    "index": "4"
+                },
+                "2アドレス追加": {
+                    "label": "2アドレス追加",
+                    "index": "1"
+                }
+            },
+            "defaultValue": ""
+        },
+        "建物種別": {
+            "type": "DROP_DOWN",
+            "code": "建物種別",
+            "label": "建物種別",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "マンション": {
+                    "label": "マンション",
+                    "index": "1"
+                },
+                "戸建": {
+                    "label": "戸建",
+                    "index": "0"
+                }
+            },
+            "defaultValue": ""
+        },
+        "HGW型番": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "HGW型番",
+            "label": "HGW型番",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "転用情報_カード番号下4ケタ": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "転用情報_カード番号下4ケタ",
+            "label": "転用_カード番号下4ケタ（カード）",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "4",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "利停予定日": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "利停予定日",
+            "label": "利停予定日",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "延滞情報": {
+            "type": "DROP_DOWN",
+            "code": "延滞情報",
+            "label": "延滞情報",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "要督促": {
+                    "label": "要督促",
+                    "index": "0"
+                }
+            },
+            "defaultValue": ""
+        },
+        "P担当者 名": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "P担当者名",
+            "label": "P担当者名（ソリューション）",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "sex": {
+            "type": "RADIO_BUTTON",
+            "code": "sex",
+            "label": "フレッツ光 契約者性別",
+            "noLabel": false,
+            "required": true,
+            "options": {
+                "女": {
+                    "label": "女",
+                    "index": "1"
+                },
+                "男": {
+                    "label": "男",
+                    "index": "0"
+                }
+            },
+            "defaultValue": "男",
+            "align": "HORIZONTAL"
+        },
+        "ISP": {
+            "type": "DROP_DOWN",
+            "code": "ISP",
+            "label": "ISP",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "※使用禁止　速トクセットプラン（タブレット）ADP-721": {
+                    "label": "※使用禁止　速トクセットプラン（タブレット）ADP-721",
+                    "index": "25"
+                },
+                "TOPPANEWライトプラン": {
+                    "label": "TOPPANEWライトプラン",
+                    "index": "40"
+                },
+                "TOPPAらくらくプラン": {
+                    "label": "TOPPAらくらくプラン",
+                    "index": "41"
+                },
+                "速トクニューライトBIZ（Bコース）": {
+                    "label": " 速トクニューライトBIZ（Bコース）",
+                    "index": "19"
+                },
+                "速トクニューライト（Cコース）": {
+                    "label": "速トクニューライト（Cコース）",
+                    "index": "17"
+                },
+                "速トク （スーパーライトコース）※原則利用禁止": {
+                    "label": "速トク（スーパーライトコース）※原則利用禁止",
+                    "index": "31"
+                },
+                "速トク（ビジネスライトパック）": {
+                    "label": "速トク（ビジネスライトパック）",
+                    "index": "5"
+                },
+                "FT光 セットプラン（ライト）": {
+                    "label": "FT光 セットプラン（ライト）",
+                    "index": "36"
+                },
+                "速トク（社販）": {
+                    "label": "速トク（社販）",
+                    "index": "32"
+                },
+                "速トク（バリュー＋コース）": {
+                    "label": "速トク（バリュー＋コース）",
+                    "index": "52"
+                },
+                "速トクニ ューライトBIZ（Aコース）": {
+                    "label": "速トクニューライトBIZ（Aコース）",
+                    "index": "18"
+                },
+                "速トク(はじめてプラン ライト) ＊東のみOK": {
+                    "label": "速トク(はじめてプラン ライト) ＊東のみOK",
+                    "index": "4"
+                },
+                "速トク(はじめてプラン ベーシック) ＊東西OK": {
+                    "label": "速トク(はじめてプラン ベーシック) ＊東 西OK",
+                    "index": "3"
+                },
+                "変更しない　※速トクJTSSプラン、回線単体": {
+                    "label": "変更しない　※速トクJTSSプラン、回線単体",
+                    "index": "7"
+                },
+                "速トクニューラ イトBIZ（Dコース）": {
+                    "label": "速トクニューライトBIZ（Dコース）",
+                    "index": "21"
+                },
+                "FT光 セットプラン（[特別]専用）": {
+                    "label": "FT光 セットプラン（[ 特別]専用）",
+                    "index": "38"
+                },
+                "FT光 セットプラン（ニューライト専用）": {
+                    "label": "FT光 セットプラン（ニューライト専用）",
+                    "index": "37"
+                },
+                "速トク（お得意様プラン）": {
+                    "label": "速トク（お得意様プラン）",
+                    "index": "9"
+                },
+                "TOPPAもっとおトク割プラン": {
+                    "label": "TOPPAもっとおトク割プラン",
+                    "index": "43"
+                },
+                "なし": {
+                    "label": "なし",
+                    "index": "50"
+                },
+                "速トク（Pコネクトプラン）　＊原則利用禁止": {
+                    "label": "速トク（Pコネクトプラン）　＊原則利用禁止",
+                    "index": "53"
+                },
+                "速トク（スタンダードコース）": {
+                    "label": "速トク（スタンダードコース）",
+                    "index": "10"
+                },
+                "速トクニューライト（Aコース）": {
+                    "label": "速トクニューライト（Aコース）",
+                    "index": "15"
+                },
+                "NEXTプラン（要確認）": {
+                    "label": "NEXTプラン（要確認）",
+                    "index": "48"
+                },
+                "速トク（ベーシックコース）": {
+                    "label": "速トク（ベーシックコース）",
+                    "index": "12"
+                },
+                "TOPPAセーフティ長割プラン": {
+                    "label": "TOPPAセーフティ長割プラン",
+                    "index": "46"
+                },
+                "※使用禁止　速トクセッ トプラン（PC）": {
+                    "label": "※使用禁止　速トクセットプラン（PC）",
+                    "index": "30"
+                },
+                "速トクニューライト（Bコース）": {
+                    "label": "速トクニューライト（Bコース）",
+                    "index": "16"
+                },
+                "速トク（アローズ特別プラン）": {
+                    "label": "速トク（アローズ特別プラン）",
+                    "index": "8"
+                },
+                "TOPPAずっとセーフティプラン": {
+                    "label": "TOPPAずっとセーフティプラン",
+                    "index": "45"
+                },
+                "速トクニューライトBIZ（Cコース）": {
+                    "label": "速トクニューライトBIZ（Cコース）",
+                    "index": "20"
+                },
+                "速 トク（株主優待プラン）": {
+                    "label": "速トク（株主優待プラン）",
+                    "index": "33"
+                },
+                "NEXTライトプラン（要確認）": {
+                    "label": "NEXTライトプラン（要確認）",
+                    "index": "49"
+                },
+                "※使用禁止　速トクセットプラン（タブレット）MediaPad7-Youth2": {
+                    "label": "※使用禁止　速トクセットプラン（タブレット）MediaPad7-Youth2",
+                    "index": "26"
+                },
+                "速トクセットプラン（タブレット）IFS-100": {
+                    "label": "速トクセットプラン（タブレット）IFS-100",
+                    "index": "27"
+                },
+                "速トクニューライ トBIZ（Fコース）": {
+                    "label": "速トクニューライトBIZ（Fコース）",
+                    "index": "23"
+                },
+                "速トク(はじめてプラン スタンダード) ＊東西OK": {
+                    "label": "速トク(は じめてプラン スタンダード) ＊東西OK",
+                    "index": "1"
+                },
+                "TOPPAバリューSプラン": {
+                    "label": "TOPPAバリューSプラン",
+                    "index": "42"
+                },
+                "FT光 セットプラン（バリュー）": {
+                    "label": "FT光 セットプラン（バリュー）",
+                    "index": "35"
+                },
+                "速トク（ケータイ割プラン）": {
+                    "label": "速トク（ケータイ割プラン）",
+                    "index": "14"
+                },
+                "速トクニューライトBIZ（Eコース）": {
+                    "label": "速トクニューライトBIZ（Eコース）",
+                    "index": "22"
+                },
+                "FT光 セットプラン（スタンダード）": {
+                    "label": "FT 光 セットプラン（スタンダード）",
+                    "index": "34"
+                },
+                "速トク（エコノミープラン）※西のみOK": {
+                    "label": "速トク（エコノミープラン）※西のみOK",
+                    "index": "24"
+                },
+                "NEXTバリュー（要確認）": {
+                    "label": "NEXTバリュー（要確認）",
+                    "index": "47"
+                },
+                "速トク（ライトコース）": {
+                    "label": "速トク（ライトコース）",
+                    "index": "13"
+                },
+                "追加予定1": {
+                    "label": "追加予定1",
+                    "index": "39"
+                },
+                "TOPPA充実プラン": {
+                    "label": "TOPPA充実プラン",
+                    "index": "44"
+                },
+                "変更しない": {
+                    "label": "変更しない",
+                    "index": "0"
+                },
+                "変更しない　※速トクビジネス、回線単体": {
+                    "label": "変更しない　※速トクビジネス、回線単体",
+                    "index": "6"
+                },
+                "※使用禁止　速トク セットプラン（iPad）Air2-白": {
+                    "label": "※使用禁止　速トクセットプラン（iPad）Air2-白",
+                    "index": "29"
+                },
+                "速トク(はじめてプラン バリュー) ＊東西OK": {
+                    "label": "速トク(はじめてプラン バリュー) ＊東西OK",
+                    "index": "2"
+                },
+                "速トク（バリューコース）": {
+                    "label": "速トク（バリューコース）",
+                    "index": "11"
+                },
+                "その他": {
+                    "label": "その他",
+                    "index": "51"
+                },
+                "※使用禁止　速トクセットプラン（iPad）mini3-白": {
+                    "label": "※使用禁止　速トクセットプラン（iPad）mini3-白",
+                    "index": "28"
+                }
+            },
+            "defaultValue": ""
+        },
+        "サービスエリア選択": {
+            "type": "RADIO_BUTTON",
+            "code": "サービスエリア選択",
+            "label": "エリア選択",
+            "noLabel": false,
+            "required": true,
+            "options": {
+                "西日本": {
+                    "label": "西日本",
+                    "index": "1"
+                },
+                "東日本": {
+                    "label": "東日本",
+                    "index": "0"
+                }
+            },
+            "defaultValue": "東日本",
+            "align": "HORIZONTAL"
+        },
+        "転用承諾番号": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "転用承諾番号",
+            "label": "転用承諾番号（E or W ＋10ケタの数字）",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "11",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "新規獲得_連絡希望時 間帯": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "新規獲得_連絡希望時間帯",
+            "label": "新規獲得_連絡希望時間帯",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "関連レコード一覧": {
+            "type": "REFERENCE_TABLE",
+            "code": "関連レコード一覧",
+            "label": "対応履歴（長期料割引サービス）",
+            "noLabel": false,
+            "referenceTable": null
+        },
+        "BEAMSステータス": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "BEAMSステータス",
+            "label": "BEAMSステータス（入力不要）",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "マイナンバー1": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "マイナンバー1",
+            "label": "マイナン バー#1電話番号",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "マイナンバー2": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "マイナンバー2",
+            "label": "マイナンバー#2電話番号",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "新規獲得_連絡先電話番号": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "新規獲得_連絡先電話番号",
+            "label": "新規獲得_連絡先電話番号",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "マイナンバー3": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "マイナンバー3",
+            "label": "マイナンバー#3電話番号",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "REQ番号": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "REQ番号",
+            "label": "REQ番号（BEAMS発番）",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "11",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "マイナンバー4": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "マイナンバー4",
+            "label": "マイナンバー#4電話番号",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "新規獲得_固定電話番ポ": {
+            "type": "RADIO_BUTTON",
+            "code": "新規獲得_固定電話番ポ",
+            "label": "新規獲 得_固定電話番ポ",
+            "noLabel": false,
+            "required": true,
+            "options": {
+                "無": {
+                    "label": "無",
+                    "index": "1"
+                },
+                "有": {
+                    "label": "有",
+                    "index": "0"
+                }
+            },
+            "defaultValue": "有",
+            "align": "HORIZONTAL"
+        },
+        "注意フラグ_旧": {
+            "type": "DROP_DOWN",
+            "code": "注意フラグ_旧",
+            "label": "注意フラグ（旧）入力禁止",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "備考要確認": {
+                    "label": "備考要確認",
+                    "index": "0"
+                },
+                "追加予定2": {
+                    "label": "追加予定2",
+                    "index": "5"
+                },
+                "テスト顧客（後日削除）": {
+                    "label": "テスト顧客（後日削除）",
+                    "index": "3"
+                },
+                "アイエフネット顧客": {
+                    "label": "アイエフネット顧客",
+                    "index": "2"
+                },
+                "NTTコラボ対象外ARPU お客様での解約必要": {
+                    "label": "NTTコラボ対象外ARPU お客様での解約必要",
+                    "index": "4"
+                },
+                "コール禁止": {
+                    "label": "コール禁止",
+                    "index": "1"
+                }
+            },
+            "defaultValue": ""
+        },
+        "注意フ ラグ": {
+            "type": "MULTI_SELECT",
+            "code": "注意フラグ",
+            "label": "注意フラグ（複数選択可）",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "過去誤請求あり": {
+                    "label": "過去誤請求あり",
+                    "index": "20"
+                },
+                "Fコール除外（入電あり）": {
+                    "label": "Fコール除外（入電あり）",
+                    "index": "18"
+                },
+                "備考要確認": {
+                    "label": "備 考要確認",
+                    "index": "0"
+                },
+                "IF長期利用割引サービス適用": {
+                    "label": "IF長期利用割引サービス適用",
+                    "index": "24"
+                },
+                "GMO未接続エラー（ルータ対象外）未対応": {
+                    "label": "GMO未接続エラー（ルータ対象外）未対応",
+                    "index": "6"
+                },
+                "Fコール済み（問題無し）": {
+                    "label": "Fコール済み（問題無し）",
+                    "index": "15"
+                },
+                "過去誤請求（日割り計算ミス）": {
+                    "label": "過去誤請求（日割り計算ミス）",
+                    "index": "21"
+                },
+                "違約金9800円案件": {
+                    "label": "違約金9800円案件",
+                    "index": "22"
+                },
+                " アイエフネット顧客": {
+                    "label": "アイエフネット顧客",
+                    "index": "2"
+                },
+                "Fコールまだ": {
+                    "label": "Fコールまだ",
+                    "index": "13"
+                },
+                "NTTコラボ対象外ARPU お客様での解約必要": {
+                    "label": "NTTコラボ対象外ARPU お客様での解約必要",
+                    "index": "4"
+                },
+                "Fコール済み（フレッツに戻す）": {
+                    "label": "Fコール済み（フレッツに戻 す）",
+                    "index": "14"
+                },
+                "株主優待プラン（営業架電禁止）": {
+                    "label": "株主優待プラン（営業架電禁止）",
+                    "index": "23"
+                },
+                "GMO未接続エラー（既存V6接続）未対応": {
+                    "label": "GMO未接続エラー（既存V6接続）未対応",
+                    "index": "8"
+                },
+                "テスト顧客（後日削除）": {
+                    "label": "テスト顧客（後日削除）",
+                    "index": "3"
+                },
+                "フォローコール済み": {
+                    "label": "フォローコール済み",
+                    "index": "5"
+                },
+                "GMO未接続エラー（その他）未対応": {
+                    "label": "GMO未接続エラー（その他）未対応",
+                    "index": "10"
+                },
+                "Fコール書面発送済み（150918-26）": {
+                    "label": "Fコール書面発送済み（150918-26）",
+                    "index": "19"
+                },
+                "GMO未接続エラー（その他）完了": {
+                    "label": "GMO未接続エラー（その他）完了",
+                    "index": "11"
+                },
+                "GMO未接続エラー（既存V6接続）完了": {
+                    "label": "GMO未接続エラー（既存V6接続）完了",
+                    "index": "9"
+                },
+                "Fコー ルその他": {
+                    "label": "Fコールその他",
+                    "index": "17"
+                },
+                "コール禁止": {
+                    "label": "コール禁止",
+                    "index": "1"
+                },
+                "お客様ID重複削除": {
+                    "label": "お客様ID重複削除",
+                    "index": "12"
+                },
+                "GMO未接続エラー（ルータ対象外）完了": {
+                    "label": "GMO未接続エラー（ルータ対象外）完了",
+                    "index": "7"
+                },
+                "Fコール済み（金額変更で継続）": {
+                    "label": "Fコール済み（金額変更で継続）",
+                    "index": "16"
+                },
+                "トスアップ案件": {
+                    "label": "トスアップ案件",
+                    "index": "25"
+                }
+            },
+            "defaultValue": []
+        },
+        "postcode_4": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "postcode_4",
+            "label": "請求先郵便番号",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "備考": {
+            "type": "MULTI_LINE_TEXT",
+            "code": "備考",
+            "label": "備考1",
+            "noLabel": false,
+            "required": false,
+            "defaultValue": ""
+        },
+        "postcode_2": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "postcode_2",
+            "label": "開通案内郵便番号",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "転用承諾番号_0": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "転用承諾番号_0",
+            "label": "事業者変更（他社⇒自社）承諾番号（F or T ＋10ケタの数字）",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "11",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "postcode_3": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "postcode_3",
+            "label": "設置場所郵便番号",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "転用承諾番号_2": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "転用承諾番号_2",
+            "label": "事業者変更後（他社⇒自社）のキャンセル承諾番号（G or Y ＋10ケタの数字）",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "11",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "NTT注文S_HGW交換": {
+            "type": "CHECK_BOX",
+            "code": "NTT注文S_HGW交換",
+            "label": "NTT注文S　HGW交換",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "登録完了": {
+                    "label": "登録完了",
+                    "index": "0"
+                }
+            },
+            "defaultValue": [],
+            "align": "HORIZONTAL"
+        },
+        "転用承諾番号_1": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "転用承諾番号_1",
+            "label": "事業者変更（自社⇒他社）承諾番号（F or T ＋10ケタの数字）",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "11",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "新規獲得説明事項": {
+            "type": "CHECK_BOX",
+            "code": "新規獲得説明事項",
+            "label": "新規獲得説明事項",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "事務手数料3000円説明済み": {
+                    "label": "事務手数料3000円説明済み",
+                    "index": "0"
+                },
+                "土日祝祭日工事日3000円説明済み": {
+                    "label": "土日祝祭日工事日3000円説明済み",
+                    "index": "1"
+                }
+            },
+            "defaultValue": [],
+            "align": "VERTICAL"
+        },
+        "転用承諾番号_3": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "転用承諾番号_3",
+            "label": "事業者変更後（自社⇒他社）のキャンセル承 諾番号（G or Y ＋10ケタの数字）",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "11",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "工事希望日_第二希望": {
+            "type": "DATE",
+            "code": "工事希望日_第二希望",
+            "label": "工事希望日_第二希望",
+            "noLabel": false,
+            "required": false,
+            "unique": false,
+            "defaultValue": "",
+            "defaultNowValue": false
+        },
+        "contractor_1": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "contractor_1",
+            "label": "申込者名",
+            "noLabel": false,
+            "required": true,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "解約日": {
+            "type": "DATE",
+            "code": "解約日",
+            "label": "解約日",
+            "noLabel": false,
+            "required": false,
+            "unique": false,
+            "defaultValue": "",
+            "defaultNowValue": false
+        },
+        "その他ARPU": {
+            "type": "CHECK_BOX",
+            "code": "その他ARPU",
+            "label": "その他ARPU",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "リモートサポー ト": {
+                    "label": "リモートサポート",
+                    "index": "0"
+                },
+                "Bizひかりクラウド": {
+                    "label": "Bizひかりクラウド",
+                    "index": "5"
+                },
+                "ネットサポート": {
+                    "label": "ネットサ ポート",
+                    "index": "7"
+                },
+                "レンタルフォン500": {
+                    "label": "レンタルフォン500",
+                    "index": "8"
+                },
+                "オンラインパソコン教室": {
+                    "label": "オンラインパソコン教室",
+                    "index": "6"
+                },
+                "QQ English(ﾀﾌﾞﾚｯﾄ推奨)": {
+                    "label": "QQ English(ﾀﾌﾞﾚｯﾄ推奨)",
+                    "index": "10"
+                },
+                "フレッツ・V6オプション": {
+                    "label": "フレッツ・V6オプション",
+                    "index": "2"
+                },
+                "ホームゲートウェイ": {
+                    "label": "ホームゲートウェイ",
+                    "index": "4"
+                },
+                "レンタルフォン980": {
+                    "label": "レンタルフォン980",
+                    "index": "9"
+                },
+                "フレッツ・テレビ電送サービス": {
+                    "label": "フレッツ・テレビ電送サービス",
+                    "index": "1"
+                },
+                "フレッツナンバー通知機能": {
+                    "label": "フレッツナンバー通知機能",
+                    "index": "3"
+                }
+            },
+            "defaultValue": [
+                "フレッツ・V6オプション",
+                "フレッツナンバー通知機能"
+            ],
+            "align": "VERTICAL"
+        },
+        "注文種別": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "注文種別",
+            "label": "NTT注文種別",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "contractor_4": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "contractor_4",
+            "label": "請求先名称",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "contractor_2": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "contractor_2",
+            "label": "開通案内宛先名称",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "contractor_3": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "contractor_3",
+            "label": "設置場所名称",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "town": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "town",
+            "label": "契約者_市区町村",
+            "noLabel": false,
+            "required": true,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "利用者情報": {
+            "type": "GROUP",
+            "code": "利用者情報",
+            "label": "9.利用者情報",
+            "noLabel": false,
+            "openGroup": false
+        },
+        "販売管理S顧客CD": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "販売管理S顧客CD",
+            "label": "販売管理S顧客CD",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "10",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "HGW派遣工事": {
+            "type": "CHECK_BOX",
+            "code": "HGW派遣工事",
+            "label": "HGW派遣工事",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "あり": {
+                    "label": "あり",
+                    "index": "0"
+                }
+            },
+            "defaultValue": [],
+            "align": "HORIZONTAL"
+        },
+        "NTT解約ARPU": {
+            "type": "MULTI_SELECT",
+            "code": "NTT解約ARPU",
+            "label": "NTT解約ARPU（複数選択可）",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "ダブルチャネル": {
+                    "label": "ダブルチャネル",
+                    "index": "8"
+                },
+                "ナンバー・ディスプレイ": {
+                    "label": "ナンバー・ディスプレイ",
+                    "index": "0"
+                },
+                "フリーアクセス・ネクスト": {
+                    "label": "フリーアクセス・ネクスト",
+                    "index": "13"
+                },
+                "ナンバー・リクエスト": {
+                    "label": "ナンバー・リクエスト",
+                    "index": "1"
+                },
+                "キャッチホン": {
+                    "label": "キャッチホン",
+                    "index": "2"
+                },
+                "ホームゲートウェイ": {
+                    "label": "ホームゲートウェイ",
+                    "index": "21"
+                },
+                "無線LANカード": {
+                    "label": "無線LANカード",
+                    "index": "24"
+                },
+                "スマホ de ひかり電話": {
+                    "label": "スマホ de ひかり電話",
+                    "index": "16"
+                },
+                "リモートサポート": {
+                    "label": "リモートサポ ート",
+                    "index": "17"
+                },
+                "Bizひかりクラウド": {
+                    "label": "Bizひかりクラウド",
+                    "index": "22"
+                },
+                "迷惑電話おことわりサービス": {
+                    "label": "迷惑電話おことわりサ ービス",
+                    "index": "4"
+                },
+                "オンラインパソコン教室": {
+                    "label": "オンラインパソコン教室",
+                    "index": "23"
+                },
+                "テレビ電話": {
+                    "label": "テレビ電話",
+                    "index": "10"
+                },
+                "マイナンバー": {
+                    "label": "マイナンバー",
+                    "index": "7"
+                },
+                "コールセレクト": {
+                    "label": "コールセレクト",
+                    "index": "15"
+                },
+                "フレッツ・V6オプション": {
+                    "label": "フレッツ・V6オプション",
+                    "index": "19"
+                },
+                "フレッツナンバー通知機能": {
+                    "label": "フレッツナンバー通知機能",
+                    "index": "20"
+                },
+                "着信お知らせメール": {
+                    "label": "着信お知らせメール",
+                    "index": "5"
+                },
+                "ボイスワープ": {
+                    "label": "ボイスワープ",
+                    "index": "3"
+                },
+                "フリーアクセス・ひかりワイド": {
+                    "label": "フリーアクセ ス・ひかりワイド",
+                    "index": "12"
+                },
+                "FAXお知らせメール": {
+                    "label": "FAXお知らせメール",
+                    "index": "6"
+                },
+                "1ギガ対応無線LANルータ": {
+                    "label": "1ギガ対応無線LANルータ",
+                    "index": "25"
+                },
+                "高音質電話": {
+                    "label": "高音質電話",
+                    "index": "11"
+                },
+                "データコネクト": {
+                    "label": "データコネクト",
+                    "index": "9"
+                },
+                "ひかり電話＃ ダイヤル": {
+                    "label": "ひかり電話＃ダイヤル",
+                    "index": "14"
+                },
+                "フレッツ・テレビ電送サービス": {
+                    "label": "フレッツ・テレビ電送サービス",
+                    "index": "18"
+                }
+            },
+            "defaultValue": []
+        },
+        "携帯種別": {
+            "type": "DROP_DOWN",
+            "code": "携帯種別",
+            "label": "携帯種別",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "ガラケー": {
+                    "label": "ガラケー",
+                    "index": "0"
+                },
+                "格安スマートフォン": {
+                    "label": "格安スマートフォン",
+                    "index": "2"
+                },
+                "スマートフォン": {
+                    "label": "スマートフォン",
+                    "index": "1"
+                },
+                "その他（営コメに入力）": {
+                    "label": "その他（営コメに入力）",
+                    "index": "3"
+                }
+            },
+            "defaultValue": ""
+        },
+        "会員管理S会員ID": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "会員管理S会員ID",
+            "label": "会員管理S会員ID",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "10",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "営業コメNEXT用": {
+            "type": "MULTI_LINE_TEXT",
+            "code": "営業コメNEXT用",
+            "label": "営業コメント欄（NEXT営業用）",
+            "noLabel": false,
+            "required": false,
+            "defaultValue": ""
+        },
+        "レンタル機器設置年月日": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "レンタル機器設置年月日",
+            "label": "レンタル機器設置年月日",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "部課名": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "部課名",
+            "label": "委託取次店名",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "phoneNumber": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "phoneNumber",
+            "label": "フレッツ光契約者電話番号",
+            "noLabel": false,
+            "required": true,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "契約者名屋号": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "契約者名屋号",
+            "label": "契約者名屋号（法人のみ）",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "第一希望日_工事予定時間帯": {
+            "type": "DROP_DOWN",
+            "code": "第一希望日_工事予定時間帯",
+            "label": "第一希望日_工事予定時間帯",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "午後フリー": {
+                    "label": "午後フリー",
+                    "index": "1"
+                },
+                "午前フリー": {
+                    "label": "午前フリー",
+                    "index": "0"
+                }
+            },
+            "defaultValue": ""
+        },
+        "birthday1": {
+            "type": "DATE",
+            "code": "birthday1",
+            "label": "申込者生年月日",
+            "noLabel": false,
+            "required": false,
+            "unique": false,
+            "defaultValue": "",
+            "defaultNowValue": false
+        },
+        "支払方法": {
+            "type": "DROP_DOWN",
+            "code": "支払方法",
+            "label": "支払方法",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "クレジットカード": {
+                    "label": "クレジットカード",
+                    "index": "2"
+                },
+                "クレジットカード（コンビニ）": {
+                    "label": "クレジットカード（コンビニ）",
+                    "index": "4"
+                },
+                "口座振替": {
+                    "label": "口座振替",
+                    "index": "1"
+                },
+                "請求書": {
+                    "label": "請求書",
+                    "index": "0"
+                },
+                "口座振替（コンビニ）": {
+                    "label": "口座振替（コンビニ）",
+                    "index": "3"
+                },
+                "その他": {
+                    "label": "その他",
+                    "index": "5"
+                }
+            },
+            "defaultValue": ""
+        },
+        "sex1": {
+            "type": "RADIO_BUTTON",
+            "code": "sex1",
+            "label": "申込者性別",
+            "noLabel": false,
+            "required": true,
+            "options": {
+                "女": {
+                    "label": "女",
+                    "index": "1"
+                },
+                "男": {
+                    "label": "男",
+                    "index": "0"
+                }
+            },
+            "defaultValue": "男",
+            "align": "HORIZONTAL"
+        },
+        "LBCコード": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "LBCコード",
+            "label": "LBCコード",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "11",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "name_4": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "name_4",
+            "label": "請求先担当者（任意）",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "no_hyphen": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "no_hyphen",
+            "label": "フレッツ光契約者電話番号(ハイフンなし)",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "変更前_変更後契約ID": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "変更前_変更後契約ID",
+            "label": "変更前/変更後契約ID",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "工事希望日_第三希望": {
+            "type": "DATE",
+            "code": "工事希望日_第三希望",
+            "label": "工事希望日_第三希望",
+            "noLabel": false,
+            "required": false,
+            "unique": false,
+            "defaultValue": "",
+            "defaultNowValue": false
+        },
+        "HGW交換": {
+            "type": "CHECK_BOX",
+            "code": "HGW交換",
+            "label": "HGW交 換",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "あり（お客様承諾済み）": {
+                    "label": "あり（お客様承諾済み）",
+                    "index": "0"
+                }
+            },
+            "defaultValue": [],
+            "align": "HORIZONTAL"
+        },
+        "新規獲得_番ポ電話番号": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "新規獲得_番ポ電話番号",
+            "label": "新規獲得_番ポ電話番号",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "BO理由": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "BO理由",
+            "label": "BO理由",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "phoneNumber_1": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "phoneNumber_1",
+            "label": "申込者電話番号",
+            "noLabel": false,
+            "required": true,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "お申込み日": {
+            "type": "DATE",
+            "code": "お申込み日",
+            "label": "お申込み日",
+            "noLabel": false,
+            "required": false,
+            "unique": false,
+            "defaultValue": "",
+            "defaultNowValue": true
+        },
+        "店所CD": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "店所CD",
+            "label": "店所CD",
+            "noLabel": false,
+            "required": false,
+            "lookup": null
+        },
+        "ひかり電話オプション": {
+            "type": "CHECK_BOX",
+            "code": "ひかり電話オプション",
+            "label": "ひかり電話オプション",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "着信お知らせメール": {
+                    "label": "着信お知らせメール",
+                    "index": "5"
+                },
+                "ボイスワープ": {
+                    "label": "ボイスワープ",
+                    "index": "3"
+                },
+                "ダブルチャネル": {
+                    "label": "ダブルチャネル",
+                    "index": "8"
+                },
+                "ナンバー・ディスプレイ": {
+                    "label": "ナンバー・ディスプレイ",
+                    "index": "0"
+                },
+                "フリーアクセス・ネクスト": {
+                    "label": "フリーアクセス・ネクスト",
+                    "index": "13"
+                },
+                "ナンバー・リクエスト": {
+                    "label": "ナンバー・リクエスト",
+                    "index": "1"
+                },
+                "フリーアクセス・ひかりワイド": {
+                    "label": "フリーアクセス・ひかりワイド",
+                    "index": "12"
+                },
+                "キャッチホン": {
+                    "label": "キャッチホン",
+                    "index": "2"
+                },
+                "FAXお知らせメール": {
+                    "label": "FAXお知らせメール",
+                    "index": "6"
+                },
+                "スマホ de ひかり電話": {
+                    "label": "スマホ de ひかり電話",
+                    "index": "16"
+                },
+                "迷惑電話おことわりサービス": {
+                    "label": "迷惑電話おことわりサービス",
+                    "index": "4"
+                },
+                "テレビ電話": {
+                    "label": "テレビ電話",
+                    "index": "10"
+                },
+                "マイナンバー": {
+                    "label": "マイナンバー",
+                    "index": "7"
+                },
+                "高音質電話": {
+                    "label": "高音質電話",
+                    "index": "11"
+                },
+                "コールセレクト": {
+                    "label": "コールセレクト",
+                    "index": "15"
+                },
+                "データコネクト": {
+                    "label": "データコネクト",
+                    "index": "9"
+                },
+                "ひかり電話＃ダイヤル": {
+                    "label": "ひかり電話＃ダイヤル",
+                    "index": "14"
+                }
+            },
+            "defaultValue": [],
+            "align": "VERTICAL"
+        },
+        "申込者モバイル利用状況": {
+            "type": "GROUP",
+            "code": "申込者モバイル利用状況",
+            "label": "6-3.申込者モバイル利用状況(NW本部用)",
+            "noLabel": false,
+            "openGroup": true
+        },
+        "HGW工事代金": {
+            "type": "NUMBER",
+            "code": "HGW工事代金",
+            "label": "HGW工事代金",
+            "noLabel": false,
+            "required": false,
+            "minValue": "",
+            "maxValue": "",
+            "digit": true,
+            "unique": false,
+            "defaultValue": "",
+            "displayScale": "",
+            "unit": "",
+            "unitPosition": "BEFORE"
+        },
+        "キャンセル日": {
+            "type": "DATE",
+            "code": "キャンセル日",
+            "label": "キャンセル日",
+            "noLabel": false,
+            "required": false,
+            "unique": false,
+            "defaultValue": "",
+            "defaultNowValue": false
+        },
+        "関連レコード一覧_0": {
+            "type": "REFERENCE_TABLE",
+            "code": "関連レコード一覧_0",
+            "label": "移転管理",
+            "noLabel": false,
+            "referenceTable": null
+        },
+        "営業対応コメNEXT用": {
+            "type": "MULTI_LINE_TEXT",
+            "code": "営業対応コメNEXT用",
+            "label": " 営業対応コメント欄（NEXT営業用）",
+            "noLabel": false,
+            "required": false,
+            "defaultValue": ""
+        },
+        "関連レコード一覧_1": {
+            "type": "REFERENCE_TABLE",
+            "code": "関連レコード一覧_1",
+            "label": "対応履歴（速トク電気販売）",
+            "noLabel": false,
+            "referenceTable": null
+        },
+        "関連レコード一覧_2": {
+            "type": "REFERENCE_TABLE",
+            "code": "関連レコード一覧_2",
+            "label": "対応履歴（解約受付）",
+            "noLabel": false,
+            "referenceTable": null
+        },
+        "BO理由_小区分": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "BO理由_小区分",
+            "label": "BO理由　小区分",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "ドロップダウン": {
+            "type": "DROP_DOWN",
+            "code": "ドロップダウン",
+            "label": "口座有無",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "なし": {
+                    "label": "なし",
+                    "index": "1"
+                },
+                "あり": {
+                    "label": "あり",
+                    "index": "0"
+                }
+            },
+            "defaultValue": ""
+        },
+        "ISP_追加廃止": {
+            "type": "SUBTABLE",
+            "code": "ISP_追加廃止",
+            "noLabel": true,
+            "label": "ISP_追加廃止",
+            "fields": {
+                "追加廃止_ISP": {
+                    "type": "DROP_DOWN",
+                    "code": "追加廃止_ISP",
+                    "label": "ISP",
+                    "noLabel": false,
+                    "required": false,
+                    "options": {
+                        "ひかり速トク セットプランマンション2（スーパーライト）": {
+                            "label": "ひかり速トク セットプランマンション2（スーパーライト）",
+                            "index": "23"
+                        },
+                        "ひかり速トク 戸建セットプラン（ライト）": {
+                            "label": "ひかり速トク 戸建セットプラン（ライト）",
+                            "index": "7"
+                        },
+                        "ひかり速トク セットプランマンションミニ（スタンダード）": {
+                            "label": "ひかり速トク セットプランマンションミニ（スタンダード）",
+                            "index": "10"
+                        },
+                        "ひ かり速トク 社販向け戸建セットプラン": {
+                            "label": "ひかり速トク 社販向け戸建セットプラン",
+                            "index": "9"
+                        },
+                        "ひかり速トク 社販向けセットプランマンションミニ": {
+                            "label": "ひかり速トク 社販向けセットプランマンションミニ",
+                            "index": "14"
+                        },
+                        "ひかり速トク セットプランマンション1（ライト）": {
+                            "label": "ひか り速トク セットプランマンション1（ライト）",
+                            "index": "17"
+                        },
+                        "FT光 セットプラン（ライト）": {
+                            "label": "FT光 セットプラン（ライト）",
+                            "index": "27"
+                        },
+                        " ひかり速トク 戸建セットプラン（スーパーライト）": {
+                            "label": "ひかり速トク 戸建セットプラン（スーパーライト）",
+                            "index": "8"
+                        },
+                        "ひかり速トク 戸建セットプラン（バリュー）": {
+                            "label": "ひかり速トク 戸建セットプラン（バリュー）",
+                            "index": "6"
+                        },
+                        "FT光 セットプラン（バリュー）": {
+                            "label": "FT光 セットプラン（バリュー）",
+                            "index": "26"
+                        },
+                        "ひかり速トク セットプランマンション1（スーパーライト）": {
+                            "label": "ひかり速トク セットプランマンション1（スーパーライト）",
+                            "index": "18"
+                        },
+                        "ひかり速トク セットプランマンションミニ（スーパーライト）": {
+                            "label": "ひかり速トク セットプランマンションミニ（スーパーライト）",
+                            "index": "13"
+                        },
+                        "FT光 セットプラン（スタンダード）": {
+                            "label": "FT光 セットプラン（スタンダード）",
+                            "index": "25"
+                        },
+                        "速トク（スーパーライ トコース）※": {
+                            "label": "速トク（スーパーライトコース）※",
+                            "index": "4"
+                        },
+                        "ひかり速トク セットプランマンション2（ライト）": {
+                            "label": "ひかり速トク セットプランマンション2（ライト）",
+                            "index": "22"
+                        },
+                        "ひかり速トク セットプランマンションミニ（ライト）": {
+                            "label": "ひかり速トク セットプランマンシ ョンミニ（ライト）",
+                            "index": "12"
+                        },
+                        "ひかり速トク セットプランマンション1（スタンダード）": {
+                            "label": "ひかり速トク セットプランマンション1（スタンダード）",
+                            "index": "15"
+                        },
+                        "なし": {
+                            "label": "なし",
+                            "index": "0"
+                        },
+                        "ひかり速トク セットプランマンション2（バリュー）": {
+                            "label": "ひかり速トク セットプ ランマンション2（バリュー）",
+                            "index": "21"
+                        },
+                        "速トク（スタンダードコース）": {
+                            "label": "速トク（スタンダードコース）",
+                            "index": "1"
+                        },
+                        "ひかり速トク セットプランマンション2（スタンダード）": {
+                            "label": "ひかり速トク セットプランマンション2（スタンダード）",
+                            "index": "20"
+                        },
+                        "速トク（ライトコース）": {
+                            "label": "速トク（ライトコース）",
+                            "index": "3"
+                        },
+                        "ひかり速トク 戸建セットプラン（スタンダード）": {
+                            "label": "ひかり速トク 戸建セットプラン（スタンダード）",
+                            "index": "5"
+                        },
+                        "ひかり速トク セットプランマンション1（バリュー）": {
+                            "label": "ひかり速トク セットプランマンション1（バリュー）",
+                            "index": "16"
+                        },
+                        "ひかり速トク セットプランマンションミニ（バリュー）": {
+                            "label": "ひかり速トク セットプランマンションミニ（バリュー）",
+                            "index": "11"
+                        },
+                        "ひかり速トク 社販向けセットプランマンション2": {
+                            "label": "ひかり速トク 社販向けセットプランマンション2",
+                            "index": "24"
+                        },
+                        "速トク（バリューコース）": {
+                            "label": "速トク（バリューコース）",
+                            "index": "2"
+                        },
+                        "ひかり速トク 社販向けセットプランマンション1": {
+                            "label": "ひかり速トク 社販向けセットプランマンション1",
+                            "index": "19"
+                        }
+                    },
+                    "defaultValue": ""
+                },
+                "追加廃止_ISP備考": {
+                    "type": "SINGLE_LINE_TEXT",
+                    "code": "追加廃止_ISP備考",
+                    "label": "ISP_備考",
+                    "noLabel": false,
+                    "required": false,
+                    "minLength": "",
+                    "maxLength": "",
+                    "expression": "",
+                    "hideExpression": false,
+                    "unique": false,
+                    "defaultValue": ""
+                },
+                "追加廃止_ISP追加日": {
+                    "type": "DATE",
+                    "code": "追加廃止_ISP追加日",
+                    "label": "ISP_追加日",
+                    "noLabel": false,
+                    "required": false,
+                    "unique": false,
+                    "defaultValue": "",
+                    "defaultNowValue": false
+                },
+                "追加廃止_ISP解約日": {
+                    "type": "DATE",
+                    "code": "追加廃止_ISP解約日",
+                    "label": "ISP_解約日",
+                    "noLabel": false,
+                    "required": false,
+                    "unique": false,
+                    "defaultValue": "",
+                    "defaultNowValue": false
+                }
+            }
+        },
+        "契約廃止日": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "契約廃止日",
+            "label": "契約廃止日",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "HGW交換日": {
+            "type": "DATE",
+            "code": "HGW交換日",
+            "label": "HGW交換日",
+            "noLabel": false,
+            "required": false,
+            "unique": false,
+            "defaultValue": "",
+            "defaultNowValue": false
+        },
+        "お問い合わせ履歴": {
+            "type": "REFERENCE_TABLE",
+            "code": "お問い合わせ履歴",
+            "label": "お客様お問い合わせ履歴",
+            "noLabel": false,
+            "referenceTable": null
+        },
+        "前確OK日": {
+            "type": "DATE",
+            "code": "前確OK日",
+            "label": "前確OK日",
+            "noLabel": false,
+            "required": false,
+            "unique": false,
+            "defaultValue": "",
+            "defaultNowValue": false
+        },
+        "新規獲得_後確連絡希望日": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "新規獲得_後確連絡希望日",
+            "label": "新規獲得_後確連絡希望日",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "ISPオプション追加廃止情報": {
+            "type": "REFERENCE_TABLE",
+            "code": "ISPオプション追加廃止情報",
+            "label": "ISPオプション追加廃止情報（簡易メモ）",
+            "noLabel": false,
+            "referenceTable": null
+        },
+        "工事予定日": {
+            "type": "DATE",
+            "code": "工事予定日",
+            "label": "工事予定日",
+            "noLabel": false,
+            "required": false,
+            "unique": false,
+            "defaultValue": "",
+            "defaultNowValue": false
+        },
+        "contractor_reading2": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "contractor_reading2",
+            "label": "申込者名カナ",
+            "noLabel": false,
+            "required": true,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "ひかり電話_追加廃止": {
+            "type": "SUBTABLE",
+            "code": "ひかり電話_追加廃止",
+            "noLabel": true,
+            "label": "ひかり電話_追加廃止",
+            "fields": {
+                "追加廃止_ひかり電話備考": {
+                    "type": "SINGLE_LINE_TEXT",
+                    "code": "追加廃止_ひかり電話備考",
+                    "label": "ひかり電話_備考",
+                    "noLabel": false,
+                    "required": false,
+                    "minLength": "",
+                    "maxLength": "",
+                    "expression": "",
+                    "hideExpression": false,
+                    "unique": false,
+                    "defaultValue": ""
+                },
+                "追加廃止_ひかり電話": {
+                    "type": "DROP_DOWN",
+                    "code": "追加廃止_ひかり電話",
+                    "label": "ひかり電話",
+                    "noLabel": false,
+                    "required": false,
+                    "options": {
+                        "追加予定4": {
+                            "label": "追加予定4",
+                            "index": "8"
+                        },
+                        "追加予定3": {
+                            "label": "追加予定3",
+                            "index": "7"
+                        },
+                        "追加予定2": {
+                            "label": "追加予定2",
+                            "index": "6"
+                        },
+                        "追加予定1": {
+                            "label": "追加予定1",
+                            "index": "5"
+                        },
+                        "オフィスタイプ": {
+                            "label": "オフィスタイプ",
+                            "index": "3"
+                        },
+                        "エースプラン": {
+                            "label": "エースプラン",
+                            "index": "2"
+                        },
+                        "なし": {
+                            "label": "なし",
+                            "index": "0"
+                        },
+                        "基本プラン": {
+                            "label": "基本プラン",
+                            "index": "1"
+                        },
+                        "オフィスエース": {
+                            "label": "オフィスエース",
+                            "index": "4"
+                        },
+                        "追加予定7": {
+                            "label": "追加予定7",
+                            "index": "11"
+                        },
+                        "追加予定6": {
+                            "label": "追加予定6",
+                            "index": "10"
+                        },
+                        "追加予定5": {
+                            "label": "追加予定5",
+                            "index": "9"
+                        }
+                    },
+                    "defaultValue": ""
+                },
+                "追加廃止_ひかり電話追加日": {
+                    "type": "DATE",
+                    "code": "追加廃止_ひかり電話追 加日",
+                    "label": "ひかり電話_追加日",
+                    "noLabel": false,
+                    "required": false,
+                    "unique": false,
+                    "defaultValue": "",
+                    "defaultNowValue": false
+                },
+                "追加廃止_ひかり電話解約日": {
+                    "type": "DATE",
+                    "code": "追加廃止_ひかり電話解約日",
+                    "label": "ひかり電話_解約日",
+                    "noLabel": false,
+                    "required": false,
+                    "unique": false,
+                    "defaultValue": "",
+                    "defaultNowValue": false
+                }
+            }
+        },
+        "速トク工事情報": {
+            "type": "REFERENCE_TABLE",
+            "code": "速トク工事情報",
+            "label": "速トク工事費情報",
+            "noLabel": false,
+            "referenceTable": null
+        },
+        "カテゴリー": {
+            "type": "CATEGORY",
+            "code": "カテゴリー",
+            "label": "カテゴリー",
+            "enabled": false
+        },
+        "申込種別": {
+            "type": "DROP_DOWN",
+            "code": "申込種別",
+            "label": "申込種別",
+            "noLabel": false,
+            "required": true,
+            "options": {
+                "転用（FTC勧奨案件）": {
+                    "label": "転用（FTC勧奨案件）",
+                    "index": "2"
+                },
+                "新規": {
+                    "label": "新規",
+                    "index": "1"
+                },
+                "新規（FTC勧奨案件）": {
+                    "label": "新規（FTC勧奨案件）",
+                    "index": "3"
+                },
+                "転用": {
+                    "label": "転用",
+                    "index": "0"
+                },
+                "事業者変更（他社⇒自社）": {
+                    "label": "事業者変更（他社⇒自社）",
+                    "index": "4"
+                }
+            },
+            "defaultValue": ""
+        },
+        "支払情報回収状況": {
+            "type": "GROUP",
+            "code": "支払情報回収状況",
+            "label": "12-2.支払情報回収状況（NW本部用）",
+            "noLabel": false,
+            "openGroup": true
+        },
+        "工事有無": {
+            "type": "RADIO_BUTTON",
+            "code": "工事 有無",
+            "label": "工事有無",
+            "noLabel": true,
+            "required": true,
+            "options": {
+                "工事無": {
+                    "label": "工事無",
+                    "index": "2"
+                },
+                "未選択": {
+                    "label": "未選択",
+                    "index": "0"
+                },
+                "工事有": {
+                    "label": "工事有",
+                    "index": "1"
+                }
+            },
+            "defaultValue": "未選択",
+            "align": "HORIZONTAL"
+        },
+        "新規獲得_回線名義人番ポあり": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "新規獲得_回線名義人番ポあり",
+            "label": "新規獲得_回線名義人（番ポあり）",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "サービス名": {
+            "type": "DROP_DOWN",
+            "code": "サービス名",
+            "label": "サービス名",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "FT光 マンション・ギガラインタイプ2[特別]（2500）（FT光）": {
+                    "label": "FT光 マンション・ギガ ラインタイプ2[特別]（2500）（FT光）",
+                    "index": "88"
+                },
+                "FT光 ニューライト プランCコース（3200～）（FT光）": {
+                    "label": "FT光 ニューライト プランCコー ス（3200～）（FT光）",
+                    "index": "18"
+                },
+                "ひかり速トク ファミリープラン（ひかり速トク）": {
+                    "label": "ひかり速トク ファミリープラン（ひかり速トク）",
+                    "index": "0"
+                },
+                "FT光 マンション・ハイスピードタイプ1（3100）（FT光）": {
+                    "label": "FT光 マンション・ハイスピードタイプ1（3100）（FT光）",
+                    "index": "61"
+                },
+                "FT光 マンション・ハイスピードタイプ2（2800）（FT光）": {
+                    "label": "FT光 マンション・ハイスピードタイプ2（2800）（FT光）",
+                    "index": "79"
+                },
+                "FT光 フ ァミリー・ハイスピードタイプ（4000）（FT光）": {
+                    "label": "FT光 ファミリー・ハイスピードタイプ（4000）（FT光）",
+                    "index": "29"
+                },
+                "FT光 ファミリータイプ（3800）（FT光）": {
+                    "label": "FT光 ファミリータイプ（3800）（FT光）",
+                    "index": "116"
+                },
+                "FT光 マンション・ギガタイプ(S)1（3400）（FT光）": {
+                    "label": "FT光 マンション・ギガタイプ(S)1（3400）（FT光）",
+                    "index": "100"
+                },
+                "FT光 マンション・ギガラインタイプ2（2850）（FT光）": {
+                    "label": "FT光 マンション・ギガラインタイプ2（2850）（FT光）",
+                    "index": "84"
+                },
+                "FT光 マンション・ギガタイプ(S)ミニ（3400）（FT光）": {
+                    "label": "FT光 マンション・ギガタイプ(S)ミニ（3400）（FT光）",
+                    "index": "96"
+                },
+                "FT光 マンション・ハイスピードタイプ1（2930）（FT光）": {
+                    "label": "FT光 マンション・ハイスピードタイプ1（2930）（FT光）",
+                    "index": "64"
+                },
+                "FT光 マンションタイプ1（3000）（FT光）": {
+                    "label": "FT光 マンションタイプ1（3000）（FT光）",
+                    "index": "57"
+                },
+                "FT光 マン ションタイプ1[特別]（2500）（FT光）": {
+                    "label": "FT光 マンションタイプ1[特別]（2500）（FT光）",
+                    "index": "60"
+                },
+                "FT光 マンション・ギガラインタイプミニ（3400）（FT光）": {
+                    "label": "FT光 マンション・ギガラインタイプミニ（3400）（FT光）",
+                    "index": "50"
+                },
+                "FT光 マンション・ハイスピードタイプ2（2850 ）（FT光）": {
+                    "label": "FT光 マンション・ハイスピードタイプ2（2850）（FT光）",
+                    "index": "78"
+                },
+                "FT光 ファミリータイプ（4400）（FT光）": {
+                    "label": "FT 光 ファミリータイプ（4400）（FT光）",
+                    "index": "20"
+                },
+                "ひかり速トク ファミリー・ギガプラン（ひかり速トク）": {
+                    "label": "ひかり速トク ファミリー・ギ ガプラン（ひかり速トク）",
+                    "index": "2"
+                },
+                "FT光 ファミリー・ギガラインタイプ（4400）（FT光）": {
+                    "label": "FT光 ファミリー・ギガラインタイプ（4400） （FT光）",
+                    "index": "32"
+                },
+                "FT光 マンションタイプ2（2750）（FT光）": {
+                    "label": "FT光 マンションタイプ2（2750）（FT光）",
+                    "index": "74"
+                },
+                "FT光 マンション・ギガラインタイプミニ（3420）（FT光）": {
+                    "label": "FT光 マンション・ギガラインタイプミニ（3420）（FT光）",
+                    "index": "54"
+                },
+                "FT光 マンション・ギガラインタイプ1（2930）（FT光）": {
+                    "label": "FT光 マンション・ギガラインタイプ1（2930）（FT光）",
+                    "index": "69"
+                },
+                "FT光 マンションタイプミニ（3420）（FT光）": {
+                    "label": "FT光 マンションタイプミニ（3420）（FT光）",
+                    "index": "42"
+                },
+                "FT光 10ギガプラン（5000）（FT光）": {
+                    "label": "FT光 10ギガプラン（5000）（FT光）",
+                    "index": "113"
+                },
+                "ひかり速トク マンション・ギガプラン1（ひかり速トク）": {
+                    "label": "ひかり速トク マンション・ギガプラン1（ひかり速トク）",
+                    "index": "8"
+                },
+                "FT光 マンション・ギガラインタイプ2（2800）（FT光）": {
+                    "label": "FT光 マンション・ギガラインタイプ2（2800）（FT光）",
+                    "index": "85"
+                },
+                "FT光 マンション・ギガタイプ(S)2（3200）（FT光）": {
+                    "label": "FT光 マンション・ギガタイプ(S)2（3200）（FT光）",
+                    "index": "105"
+                },
+                "FT光 ファミリー・ハイスピードタイプ（4300）（FT光）": {
+                    "label": "FT光 ファミリー・ハイスピードタイプ（4300）（FT光）",
+                    "index": "27"
+                },
+                "FT光 マンション・ギガラインタイプミニ（3000）（FT光）": {
+                    "label": "FT光 マンション・ギガラインタイプミニ（3000）（FT光）",
+                    "index": "53"
+                },
+                "FT光 マンション・ギガラインタイプ2 （2530）（FT光）": {
+                    "label": "FT光 マンション・ギガラインタイプ2（2530）（FT光）",
+                    "index": "87"
+                },
+                "FT光 ファミリー・ハイスピードタイプ（3800）（FT 光）": {
+                    "label": "FT光 ファミリー・ハイスピードタイプ（3800）（FT光）",
+                    "index": "118"
+                },
+                "FT光 マンション・ギガラインタイプ1（3100）（FT光）": {
+                    "label": "FT光 マンション・ギガラインタイプ1（3100）（FT光）",
+                    "index": "66"
+                },
+                "ひかり速トクニューライトプラン": {
+                    "label": "ひかり速トクニューライトプラン",
+                    "index": "12"
+                },
+                "FT光 マンションタイプミニ（3000）（FT光）": {
+                    "label": "FT光 マンションタイプミニ（3000）（FT光）",
+                    "index": "41"
+                },
+                "FT光 マンションタイプミニ[特別]（2500）（FT光）": {
+                    "label": "FT光 マンションタイプミニ[特別]（2500）（FT光）",
+                    "index": "43"
+                },
+                "FT光 ファミリー・ギガラインタイプ（3610）（FT光）": {
+                    "label": "FT光 ファミリー・ギガラインタイプ（3610）（FT光）",
+                    "index": "36"
+                },
+                "FT光 マンション・ハイスピードタイプ2（2900）（FT光 ）": {
+                    "label": "FT光 マンション・ハイスピードタイプ2（2900）（FT光）",
+                    "index": "77"
+                },
+                "FT光 マンション・ギガタイプ(S)ミニ（3700）（FT光）": {
+                    "label": "FT光 マンション・ギガタイプ(S)ミニ（3700）（FT光）",
+                    "index": "94"
+                },
+                "FT光 マンション・ギガタイプ(S)1（3300）（FT光）": {
+                    "label": "FT光 マンション・ギガタイプ(S)1（3300）（FT光）",
+                    "index": "101"
+                },
+                "光ギガマンションタイプ34（光ギガ）": {
+                    "label": "光ギガマンションタイプ34（光ギガ）",
+                    "index": "128"
+                },
+                "要確認": {
+                    "label": "要確認",
+                    "index": "129"
+                },
+                "FT光 ファミリー・ギガラインタイプ（3800）（FT光）": {
+                    "label": "FT光 ファミリー・ギガラインタイプ（3800）（FT光）",
+                    "index": "120"
+                },
+                "FT光 FTひかり電話専用タイプオプションセット（3500）（FT光）": {
+                    "label": "FT光 FTひかり電話専用タイプオプションセ ット（3500）（FT光）",
+                    "index": "115"
+                },
+                "FT光 マンションタイプ1（2930）（FT光）": {
+                    "label": "FT光 マンションタイプ1（2930）（FT光）",
+                    "index": "59"
+                },
+                "FT光 マンションタイプ1（2900）（FT光）": {
+                    "label": "FT光 マンションタイプ1（2900）（FT光）",
+                    "index": "58"
+                },
+                "FT光 マンション・ギガラインタイプ2（2750）（FT光）": {
+                    "label": "FT光 マンション・ギガラインタイプ2（2750）（FT光）",
+                    "index": "86"
+                },
+                "FT光 マンション・ギガタイプ(S)ミニ（3300）（FT光）": {
+                    "label": "FT光 マンション・ギガタイプ(S)ミニ（3300）（FT光）",
+                    "index": "97"
+                },
+                "FT光 ファミリー・ギガタイプ(S)（4500）（FT光）": {
+                    "label": "FT光 フ ァミリー・ギガタイプ(S)（4500）（FT光）",
+                    "index": "90"
+                },
+                "FT光 10ギガプラン（5300）（FT光）": {
+                    "label": "FT光 10ギガプラン（5300）（FT光）",
+                    "index": "112"
+                },
+                "FT光 マンションタイプ1（3100）（FT光）": {
+                    "label": "FT光 マンションタイプ1（3100）（FT光）",
+                    "index": "56"
+                },
+                "FT光 マンション・ギガタイプ(S)ミニ[特別]（2800）（FT光）": {
+                    "label": "FT光 マンション・ギガタイプ(S)ミニ[特別]（2800）（FT光）",
+                    "index": "99"
+                },
+                "FT光 マンションタイプミニ（3400）（FT光）": {
+                    "label": "FT光 マンションタイプミニ（3400）（FT光）",
+                    "index": "38"
+                },
+                "FT光 ファミリータイプ（4300）（FT光）": {
+                    "label": "FT光 ファミリ ータイプ（4300）（FT光）",
+                    "index": "21"
+                },
+                "FT光 マンション・ハイスピードタイプミニ（3200）（FT光）": {
+                    "label": "FT光 マンション・ハイスピードタイプミニ（3200）（FT光）",
+                    "index": "45"
+                },
+                "ひかり速トク ファミリープラン（代理店専用）": {
+                    "label": "ひかり速トク ファミリープラン（代理店専用）",
+                    "index": "14"
+                },
+                "光ギガファミリータイプ44（光ギガ）": {
+                    "label": "光ギガファミリータイプ44（光ギガ）",
+                    "index": "126"
+                },
+                "FT光 ファミリー・ギガラインタイプ（4300）（FT光）": {
+                    "label": "FT光 ファミリー・ギガラインタイプ（4300）（FT光）",
+                    "index": "33"
+                },
+                "FT光 ファミリー・ハイスピードタイプ（4400）（FT光）": {
+                    "label": "FT光 ファミリー・ハイスピードタイプ（4400）（FT光）",
+                    "index": "26"
+                },
+                "FT光 ファミリー・ギガラインタイプ（4000）（FT光）": {
+                    "label": "FT 光 ファミリー・ギガラインタイプ（4000）（FT光）",
+                    "index": "35"
+                },
+                "FT光 マンション・ハイスピードタイプミニ（3420）（FT光）": {
+                    "label": "FT光 マンシ ョン・ハイスピードタイプミニ（3420）（FT光）",
+                    "index": "48"
+                },
+                "FT光 ニューライト ひかり電話限定プラン（2650）（FT光）": {
+                    "label": "FT光 ニューライ ト ひかり電話限定プラン（2650）（FT光）",
+                    "index": "17"
+                },
+                "FT光 マンション・ハイスピードタイプ1（2900）（FT光）": {
+                    "label": "FT光 マンション・ハイスピードタイプ1（2900）（FT光）",
+                    "index": "63"
+                },
+                "FT光 マンション・ハイスピードタイプ2[特別]（2500）（FT光）": {
+                    "label": "FT光 マンション・ハイスピードタイプ2[特別]（2500）（FT光）",
+                    "index": "82"
+                },
+                "FT光 マンションタイプ2（2900）（FT光）": {
+                    "label": "FT光 マンションタイプ2（2900）（FT光）",
+                    "index": "71"
+                },
+                "FT光 ファミリータイプ（4000）（FT光）": {
+                    "label": "FT光 ファミリータイプ（4000）（FT光）",
+                    "index": "23"
+                },
+                "FT光 ファミリー・ハイスピード タイプ[特別]（3500）（FT光）": {
+                    "label": "FT光 ファミリー・ハイスピードタイプ[特別]（3500）（FT光）",
+                    "index": "31"
+                },
+                "FT光 マンションタイプミニ（3100）（FT光）": {
+                    "label": "FT光 マンションタイプミニ（3100）（FT光）",
+                    "index": "40"
+                },
+                "FT光 マンション・ギガタイプ(S)2（3050）（FT光）": {
+                    "label": "FT光 マンション・ギガタイプ(S)2（3050）（FT光）",
+                    "index": "107"
+                },
+                "ひかり速トク マンション・ハイスピードプランミニ（ひかり速トク）": {
+                    "label": "ひか り速トク マンション・ハイスピードプランミニ（ひかり速トク）",
+                    "index": "4"
+                },
+                "FT光 マンション・ハイスピードタイプ1（3000）（FT光）": {
+                    "label": "FT光 マンション・ハイスピードタイプ1（3000）（FT光）",
+                    "index": "62"
+                },
+                "ひかり速トク マンションプランミニ（ひかり速トク）": {
+                    "label": "ひかり速トク マンションプランミニ（ひかり速トク）",
+                    "index": "3"
+                },
+                "FT光 ファミリータイプ（3610）（FT光）": {
+                    "label": "FT光 ファミリータイプ（3610）（FT光）",
+                    "index": "24"
+                },
+                "FT光 マンション・ギガタイプ(S)1（3230）（FT光）": {
+                    "label": "FT光 マンション・ギガタイプ(S)1（3230）（FT光）",
+                    "index": "103"
+                },
+                "FT光 マンション・ギガタイプ(S)1（3200）（FT光）": {
+                    "label": "FT光 マンション・ギガタイプ(S)1（3200）（FT光）",
+                    "index": "102"
+                },
+                "FT光 マンション・ギガタイプ(S)2[特別]（2800）（FT光）": {
+                    "label": "FT光 マンション・ギガタイプ(S)2[特別]（2800）（FT光）",
+                    "index": "109"
+                },
+                "FT光 10ギガプラン（5600）（FT光）": {
+                    "label": "FT光 10ギガプラン（5600）（FT光）",
+                    "index": "111"
+                },
+                "ひかり速トク マンション・ハイスピードプラン2（ひかり速トク）": {
+                    "label": "ひかり速トク マンション・ハイスピードプラン2（ひかり速トク）",
+                    "index": "10"
+                },
+                "FT光 マンション・ハイスピードタイプミニ[特別]（2500）（FT光）": {
+                    "label": "FT光 マンション・ハイスピードタイプミニ[特別]（2500）（FT光）",
+                    "index": "49"
+                },
+                "ひかり速トク マンション・ギガプランミニ（ひかり速トク）": {
+                    "label": "ひ かり速トク マンション・ギガプランミニ（ひかり速トク）",
+                    "index": "5"
+                },
+                "ひかり速トク マンションプラン2（ひかり速トク）": {
+                    "label": "ひかり速トク マ ンションプラン2（ひかり速トク）",
+                    "index": "9"
+                },
+                "FT光 ファミリー・ハイスピードタイプ（3610）（FT光）": {
+                    "label": "FT光 ファミリー・ハイスピードタイプ（3610）（FT光）",
+                    "index": "30"
+                },
+                "FT光 ファミリー・ギガラインタイプ（3700）（FT光）": {
+                    "label": "FT光 ファミリー・ギガラインタイプ（3700）（FT光）",
+                    "index": "121"
+                },
+                "FT光 ファミリータイプ（4200）（FT光）": {
+                    "label": "FT光 ファミリータイプ（4200）（FT光）",
+                    "index": "22"
+                },
+                "FT光 マンションタイ プ2（2530）（FT光）": {
+                    "label": "FT光 マンションタイプ2（2530）（FT光）",
+                    "index": "75"
+                },
+                "ひかり速トク マンション・ギガプラン2（ひかり速トク）": {
+                    "label": "ひかり速トク マンション・ギガプラン2（ひかり速トク）",
+                    "index": "11"
+                },
+                "FT光 ファミリー・ギガラインタイプ（S）（4100）（FT光）": {
+                    "label": "FT光 ファミリー・ギガラインタイプ（S）（4100）（FT光）",
+                    "index": "122"
+                },
+                "FT光 マンション・ハイスピードタイプミニ（3100）（FT光）": {
+                    "label": "FT光 マンション・ハイスピードタイプミニ（3100）（FT光）",
+                    "index": "46"
+                },
+                "ひかり速トク ファミリー・隼プラン（代理店専用）": {
+                    "label": "ひかり速トク ファミリー・隼プラン（代理店専用）",
+                    "index": "16"
+                },
+                "光ギガファミリータイプ53（光ギガ）": {
+                    "label": "光ギガファミリータイプ53（光ギガ）",
+                    "index": "125"
+                },
+                "FT光 ニューライト プランDコース（3600～）（FT光）": {
+                    "label": "FT光 ニューライト プランDコース（3600～）（FT光）",
+                    "index": "19"
+                },
+                "ひかり速トク  ファミリー・ハイスピードプラン（ひかり速トク）": {
+                    "label": "ひかり速トク ファミリー・ハイスピードプラン（ひかり速トク）",
+                    "index": "1"
+                },
+                "FT光 マン ションタイプ2[特別]（2500）（FT光）": {
+                    "label": "FT光 マンションタイプ2[特別]（2500）（FT光）",
+                    "index": "76"
+                },
+                "ひかり速トク ファミリー・ハイスピードプラン（代理店専用）": {
+                    "label": "ひかり速トク ファミリー・ハイスピードプラン（代理店専用）",
+                    "index": "15"
+                },
+                "FT光 ファミリー・ギガタイプ(S)[特別]（3800）（FT光）": {
+                    "label": "FT光 ファミリー・ギガタイプ(S)[特別]（3800）（FT光）",
+                    "index": "93"
+                },
+                "FT光 マンション・ギガラインタイプミニ（3200）（FT光）": {
+                    "label": "FT光 マンション・ギガラインタイプミニ（3200）（FT光）",
+                    "index": "51"
+                },
+                "FT光 マンション・ギガラインタイプ1[特別]（2500）（FT 光）": {
+                    "label": "FT光 マンション・ギガラインタイプ1[特別]（2500）（FT光）",
+                    "index": "70"
+                },
+                "FT光 マンションタイプミニ（3200）（FT光）": {
+                    "label": "FT光 マンションタイプミニ（3200）（FT光）",
+                    "index": "39"
+                },
+                "FT光 マンションタイプ2（2800）（FT光）": {
+                    "label": "FT光 マンションタイプ2（2800）（FT光）",
+                    "index": "73"
+                },
+                "光ギガマンションタイプ42（光ギガ）": {
+                    "label": "光ギガマンションタイプ42（光ギガ）",
+                    "index": "127"
+                },
+                "FT光 FTひかり電話専用タイ プ（2500）（FT光）": {
+                    "label": "FT光 FTひかり電話専用タイプ（2500）（FT光）",
+                    "index": "114"
+                },
+                "ひかり速トク マンションプラン1（ひかり速トク）": {
+                    "label": "ひかり速トク マンションプラン1（ひかり速トク）",
+                    "index": "6"
+                },
+                "FT光 ファミリー・ギガラインタイプ[特別]（3500）（FT光）": {
+                    "label": "FT光 フ ァミリー・ギガラインタイプ[特別]（3500）（FT光）",
+                    "index": "37"
+                },
+                "ひかり速トク マンション・ハイスピードプラン1（ひかり速トク）": {
+                    "label": "ひかり速トク マンション・ハイスピードプラン1（ひかり速トク）",
+                    "index": "7"
+                },
+                "FT光 マンション・ハイスピードタイプ2（2530）（FT光）": {
+                    "label": "FT光 マンション・ハイスピードタイプ2（2530）（FT光）",
+                    "index": "81"
+                },
+                "FT光 マンション・ギガタイプ(S)ミニ（3500）（FT光）": {
+                    "label": "FT光 マンション・ギガタイプ(S)ミニ（3500）（FT光）",
+                    "index": "95"
+                },
+                "FT光 マンション・ギガラインタイプミニ[特別]（2500）（FT光）": {
+                    "label": "FT光 マンション・ギガライ ンタイプミニ[特別]（2500）（FT光）",
+                    "index": "55"
+                },
+                "FT光 マンション・ギガタイプ(S)2（2830）（FT光）": {
+                    "label": "FT光 マンション・ギガタイプ(S)2（2830）（FT光）",
+                    "index": "108"
+                },
+                "FT光 マンション・ギガタイプ(S)1[特別]（2800）（FT光）": {
+                    "label": "FT光 マンション・ギガタイプ(S)1[特別]（2800） （FT光）",
+                    "index": "104"
+                },
+                "FT光 ファミリー・ギガラインタイプ（S）（4000）（FT光）": {
+                    "label": "FT光 ファミリー・ギガラインタイプ（S）（4000）（FT 光）",
+                    "index": "123"
+                },
+                "FT光 ファミリー・ハイスピードタイプ（3700）（FT光）": {
+                    "label": "FT光 ファミリー・ハイスピードタイプ（3700）（FT光）",
+                    "index": "119"
+                },
+                "FT光 マンション・ハイスピードタイプ2（2750）（FT光）": {
+                    "label": "FT光 マンション・ハイスピードタイプ2（2750）（FT光）",
+                    "index": "80"
+                },
+                "FT光 ファミリータイプ[特別]（3500）（FT光）": {
+                    "label": "FT光 ファミリータイプ[特別]（3500）（FT光）",
+                    "index": "25"
+                },
+                "FT光 マンション・ハイスピードタイプミニ（3000）（FT光）": {
+                    "label": "FT光 マンション・ハイスピードタイプミニ（3000）（FT光）",
+                    "index": "47"
+                },
+                "FT光 マンション・ギガラインタイプ2（2900）（FT光）": {
+                    "label": "FT光 マンション・ギガラインタイプ2（2900）（FT光）",
+                    "index": "83"
+                },
+                "FT光 ファミリー・ギガタイプ(S)（4700）（FT光 ）": {
+                    "label": "FT光 ファミリー・ギガタイプ(S)（4700）（FT光）",
+                    "index": "89"
+                },
+                "FT光 マンション・ギガタイプ(S)ミニ（3720）（FT光）": {
+                    "label": "FT光 マンション・ギガタイプ(S)ミニ（3720）（FT光）",
+                    "index": "98"
+                },
+                "FT光 ファミリー・ギガラインタイプ（4200）（FT光）": {
+                    "label": "FT光 ファミリー・ギガラインタイプ（4200）（FT光）",
+                    "index": "34"
+                },
+                "FT光 マンション・ハイスピードタイプミニ（3400）（FT光）": {
+                    "label": "FT光 マンション・ハイスピードタイプミニ（3400）（FT光）",
+                    "index": "44"
+                },
+                "FT光 マンションタイプ2（2850）（FT光）": {
+                    "label": "FT光 マンションタイプ2（2850）（FT光）",
+                    "index": "72"
+                },
+                "FT光 10ギガプラン（6300）（FT光）": {
+                    "label": "FT光 10ギガプラン（6300）（FT光）",
+                    "index": "110"
+                },
+                "FT光 マンション・ギガラインタイプ1（2900）（FT光）": {
+                    "label": "FT光 マンション・ギガラインタイプ1（2900）（FT光）",
+                    "index": "68"
+                },
+                "FT光 マンション・ハイスピードタイプ1[特別]（2500）（FT光）": {
+                    "label": "FT光 マンション・ハイスピードタイプ1[特別]（2500）（FT光）",
+                    "index": "65"
+                },
+                "FT光 ファミリー・ハイスピードタイプ（4200）（FT光）": {
+                    "label": "FT光 ファミリー・ハイスピードタイプ（4200）（FT光）",
+                    "index": "28"
+                },
+                "FT光 マンション・ギガタイプ(S)2（3100）（FT光）": {
+                    "label": "FT光 マンション・ギガタイプ(S)2（3100）（FT光）",
+                    "index": "106"
+                },
+                "FT光 マンション・ギガラインタイプミニ（3100）（FT光）": {
+                    "label": "FT光 マンション・ギ ガラインタイプミニ（3100）（FT光）",
+                    "index": "52"
+                },
+                "FT光 ファミリー・ギガタイプ(S)（4300）（FT光）": {
+                    "label": "FT光 ファミリー・ギガタイプ(S)（4300）（FT光）",
+                    "index": "91"
+                },
+                "FT光 マンション・ギガラインタイプ1（3000）（FT光）": {
+                    "label": "FT光 マンション・ギガラインタイプ1（3000）（FT光）",
+                    "index": "67"
+                },
+                "FT光 ファミリータイプ（3700）（FT光）": {
+                    "label": "FT光 ファミリータイプ（3700）（FT光）",
+                    "index": "117"
+                },
+                "FT光 ファミリー・ギガタ イプ(S)（3910）（FT光）": {
+                    "label": "FT光 ファミリー・ギガタイプ(S)（3910）（FT光）",
+                    "index": "92"
+                },
+                "その他": {
+                    "label": "その他",
+                    "index": "124"
+                },
+                "ひ かり速トクニューライトBIZプラン": {
+                    "label": "ひかり速トクニューライトBIZプラン",
+                    "index": "13"
+                }
+            },
+            "defaultValue": ""
+        },
+        "マイナンバー追加詳細": {
+            "type": "GROUP",
+            "code": "マイナンバー追加詳細",
+            "label": "マイナンバー追加詳細",
+            "noLabel": false,
+            "openGroup": false
+        },
+        "prefecture_1": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "prefecture_1",
+            "label": "申込者_都道府県",
+            "noLabel": false,
+            "required": true,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "設置場所情報": {
+            "type": "GROUP",
+            "code": "設置場所情報",
+            "label": "8.設置場所情報",
+            "noLabel": false,
+            "openGroup": false
+        },
+        "バックボーン": {
+            "type": "DROP_DOWN",
+            "code": "バックボーン",
+            "label": "バックボーン",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "Pコネクト（原則利用禁止）": {
+                    "label": "Pコネクト（原則利用禁止）",
+                    "index": "5"
+                },
+                "未接続（お客様都合）": {
+                    "label": "未接続（お客様都合）",
+                    "index": "4"
+                },
+                "GMO": {
+                    "label": "GMO",
+                    "index": "0"
+                },
+                "Freebit（原則Vectantを選択）": {
+                    "label": "Freebit（原則Vectantを選択）",
+                    "index": "2"
+                },
+                "Vectant": {
+                    "label": "Vectant",
+                    "index": "1"
+                },
+                "その他": {
+                    "label": "その他",
+                    "index": "3"
+                }
+            },
+            "defaultValue": ""
+        },
+        "レンタル": {
+            "type": "CHECK_BOX",
+            "code": "レンタル",
+            "label": "レンタル",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "オフィスタイプ対応アダプタ（4ch）": {
+                    "label": "オフィスタイプ対応アダプタ（4ch）",
+                    "index": "2"
+                },
+                "無線LANカード(NTT西向け割引適用分）": {
+                    "label": "無線LANカード(NTT西向け割引適用分）",
+                    "index": "4"
+                },
+                "1ギガ対応無線LANルータ": {
+                    "label": "1ギガ対応無線LANルータ",
+                    "index": "1"
+                },
+                "オフィスタイプ対応アダプタ（8ch）": {
+                    "label": "オフィスタイプ対応アダプタ（8ch）",
+                    "index": "3"
+                },
+                "無線LANカード": {
+                    "label": "無線LANカード",
+                    "index": "0"
+                }
+            },
+            "defaultValue": [],
+            "align": "VERTICAL"
+        },
+        "prefecture_3": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "prefecture_3",
+            "label": "設置 場所_都道府県",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "チェックボックス_2": {
+            "type": "CHECK_BOX",
+            "code": "チェックボックス_2",
+            "label": "解約金無料期間",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "該当する": {
+                    "label": "該当する",
+                    "index": "0"
+                }
+            },
+            "defaultValue": [],
+            "align": "HORIZONTAL"
+        },
+        "prefecture_2": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "prefecture_2",
+            "label": "開通案内_都道府県",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "チェックボックス_0": {
+            "type": "CHECK_BOX",
+            "code": "チェックボックス_0",
+            "label": "解約種別（当てはまる場合のみチェッ ク）",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "事業者変更（自社⇒他社）": {
+                    "label": "事業者変更（自社⇒他社）",
+                    "index": "0"
+                }
+            },
+            "defaultValue": [],
+            "align": "HORIZONTAL"
+        },
+        "prefecture_4": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "prefecture_4",
+            "label": "請求先_都道府県",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "チェックボックス_1": {
+            "type": "CHECK_BOX",
+            "code": "チェックボックス_1",
+            "label": "従前口座",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "従前口座を使う": {
+                    "label": "従前口座を使う",
+                    "index": "0"
+                }
+            },
+            "defaultValue": [],
+            "align": "HORIZONTAL"
+        },
+        "第二連絡先その他": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "第二連絡先その他",
+            "label": "第二連絡先その他",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "mobilePhone": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "mobilePhone",
+            "label": "日中連絡先(携帯)",
+            "noLabel": false,
+            "required": true,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "支払情報回収対応履歴": {
+            "type": "REFERENCE_TABLE",
+            "code": "支払情報回収対応履歴",
+            "label": "支払情報回収対応履歴",
+            "noLabel": false,
+            "referenceTable": null
+        },
+        "contractor": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "contractor",
+            "label": "フレッツ光契約者名",
+            "noLabel": false,
+            "required": true,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "FTでんき供給地点特定番号": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "FTでんき供給地点特定番号",
+            "label": "FTでんき供給地点特定番号",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "22",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "月額料金_携帯": {
+            "type": "DROP_DOWN",
+            "code": "月額料金_携帯",
+            "label": "携帯月額料金",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "6000円未満": {
+                    "label": "6000円未満",
+                    "index": "0"
+                },
+                "6000円以上8000円未満": {
+                    "label": "6000円以上8000円未満",
+                    "index": "1"
+                },
+                "8000円以上10000円未満": {
+                    "label": "8000円以上10000円未満",
+                    "index": "2"
+                },
+                "10000円以上": {
+                    "label": "10000円以上",
+                    "index": "3"
+                }
+            },
+            "defaultValue": ""
+        },
+        "新規獲得時オプション": {
+            "type": "CHECK_BOX",
+            "code": "新規獲得時オプション",
+            "label": "新規獲得時オプション",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "LANケーブル（転用時選択厳禁）": {
+                    "label": "LANケーブル（転用時選択厳禁）",
+                    "index": "0"
+                }
+            },
+            "defaultValue": [],
+            "align": "HORIZONTAL"
+        },
+        "文字列__1行_": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "文字列__1行_",
+            "label": "書面送付用パスワード",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "後確OK日": {
+            "type": "DATE",
+            "code": "後確OK日",
+            "label": "後確OK日",
+            "noLabel": false,
+            "required": false,
+            "unique": false,
+            "defaultValue": "",
+            "defaultNowValue": false
+        },
+        "部課CD": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "部課CD",
+            "label": "委託取次店CD",
+            "noLabel": false,
+            "required": false,
+            "lookup": null
+        },
+        "ひかり電話": {
+            "type": "DROP_DOWN",
+            "code": "ひかり電話",
+            "label": "ひかり電話",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "オフィスタイプ": {
+                    "label": "オフィスタイプ",
+                    "index": "3"
+                },
+                "ひかり電話ネクスト": {
+                    "label": "ひかり電話ネクスト",
+                    "index": "5"
+                },
+                "エースプラン": {
+                    "label": "エ ースプラン",
+                    "index": "2"
+                },
+                "なし": {
+                    "label": "なし",
+                    "index": "0"
+                },
+                "基本プラン": {
+                    "label": "基本プラン",
+                    "index": "1"
+                },
+                "追加予定6": {
+                    "label": "追加予定6",
+                    "index": "12"
+                },
+                "追加予定5": {
+                    "label": "追加予定5",
+                    "index": "11"
+                },
+                "追加予定4": {
+                    "label": "追加予定4",
+                    "index": "10"
+                },
+                "追加予定3": {
+                    "label": "追加予定3",
+                    "index": "9"
+                },
+                "追加予定2": {
+                    "label": "追加予定2",
+                    "index": "8"
+                },
+                "追加予定1": {
+                    "label": "追加予定1",
+                    "index": "7"
+                },
+                "安心プラン（注意・提供不可）": {
+                    "label": "安心プラン（注意・提供不可）",
+                    "index": "13"
+                },
+                "ひかり電話ネクストＡ": {
+                    "label": "ひかり電話ネクストＡ",
+                    "index": "6"
+                },
+                "オフィスエース": {
+                    "label": "オフィスエース",
+                    "index": "4"
+                }
+            },
+            "defaultValue": ""
+        },
+        "ステータス2": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "ステータス2",
+            "label": "NTTステータス",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "ステータス1": {
+            "type": "DROP_DOWN",
+            "code": "ステータス1",
+            "label": "ステータス",
+            "noLabel": false,
+            "required": true,
+            "options": {
+                "20.代理店専用（NG）": {
+                    "label": "20.代理店専用（NG）",
+                    "index": "19"
+                },
+                "1.前確待ち": {
+                    "label": "1.前確待ち",
+                    "index": "0"
+                },
+                "5.不備対応依頼（後確前）": {
+                    "label": "5.不備対応依頼（後確前）",
+                    "index": "4"
+                },
+                "12.解約中（対応中）": {
+                    "label": "12.解約中（対応中）",
+                    "index": "11"
+                },
+                "16.その他3": {
+                    "label": "16.その他3",
+                    "index": "15"
+                },
+                "26.事業者変更（自社⇒他社）対応中": {
+                    "label": "26.事業者変更（自社⇒他社）対応中",
+                    "index": "24"
+                },
+                "36.解約済み（管理用）": {
+                    "label": "36.解約済み（管理用）",
+                    "index": "30"
+                },
+                "30.オーソリ依頼": {
+                    "label": "30.オーソリ依頼",
+                    "index": "25"
+                },
+                "4.BEAMS登録OK": {
+                    "label": "4.BEAMS登録OK",
+                    "index": "3"
+                },
+                "11.キャンセル": {
+                    "label": "11.キャンセル",
+                    "index": "10"
+                },
+                "15.その他2": {
+                    "label": "15.その他2",
+                    "index": "14"
+                },
+                "6.不備解消済（後確前）": {
+                    "label": "6.不備解消済（後確前）",
+                    "index": "5"
+                },
+                "8.不備解消済（後確後）": {
+                    "label": "8.不備解消済（後確後）",
+                    "index": "7"
+                },
+                "22.解約済み（完了）": {
+                    "label": "22.解約済み（完了）",
+                    "index": "20"
+                },
+                "9.後確OK": {
+                    "label": "9.後確OK",
+                    "index": "8"
+                },
+                "18.工事日未定（営業）": {
+                    "label": "18.工事日未定（営業）",
+                    "index": "17"
+                },
+                "7.不備対応中（後確後）": {
+                    "label": "7.不備対応中（後確後）",
+                    "index": "6"
+                },
+                "24.BO": {
+                    "label": "24.BO",
+                    "index": "22"
+                },
+                "10.開通案内通知発送済み": {
+                    "label": "10.開通案内通知発送済み",
+                    "index": "9"
+                },
+                "35.月額（管理用）": {
+                    "label": "35.月額（管理用）",
+                    "index": "29"
+                },
+                "14.その他1": {
+                    "label": "14.その他1",
+                    "index": "13"
+                },
+                "2.前確対応中": {
+                    "label": "2.前確対応中",
+                    "index": "1"
+                },
+                "19.開通後保留": {
+                    "label": "19.開通後保留",
+                    "index": "18"
+                },
+                "17.工事日未定": {
+                    "label": "17.工事日未定",
+                    "index": "16"
+                },
+                "23.前確前キャンセル": {
+                    "label": "23.前確前キャンセル",
+                    "index": "21"
+                },
+                "13.開通済み": {
+                    "label": "13.開通済み",
+                    "index": "12"
+                },
+                "25.前確OK（口座原本待 ち）": {
+                    "label": "25.前確OK（口座原本待ち）",
+                    "index": "23"
+                },
+                "37.不備対応依頼（コラボ保存前）": {
+                    "label": "37.不備対応依頼（コラボ保存前）",
+                    "index": "31"
+                },
+                "3.前確OK": {
+                    "label": "3.前確OK",
+                    "index": "2"
+                },
+                "34.解約手数料（管理用）": {
+                    "label": "34.解約手数料（管理用）",
+                    "index": "28"
+                },
+                "31.オーソリOK": {
+                    "label": "31.オーソリOK",
+                    "index": "26"
+                },
+                "33.月額・解約手数料（管理用）": {
+                    "label": "33.月額・解約手数料（管理用）",
+                    "index": "27"
+                }
+            },
+            "defaultValue": ""
+        },
+        "請求先情報": {
+            "type": "GROUP",
+            "code": "請求先情報",
+            "label": "10.請求先情報",
+            "noLabel": false,
+            "openGroup": false
+        },
+        "異動情報反映": {
+            "type": "GROUP",
+            "code": "異動情報反映",
+            "label": "異動情報反映",
+            "noLabel": false,
+            "openGroup": false
+        },
+        "code_4": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "code_4",
+            "label": "請求先_番地",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "code_2": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "code_2",
+            "label": "開通案内_番地",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "code_3": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "code_3",
+            "label": "設置場所_番地",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "サービス種別": {
+            "type": "DROP_DOWN",
+            "code": "サービス種別",
+            "label": "サービス種別",
+            "noLabel": false,
+            "required": true,
+            "options": {
+                "追加予定2": {
+                    "label": "追 加予定2",
+                    "index": "2"
+                },
+                "光ギガ（Hi-bit）": {
+                    "label": "光ギガ（Hi-bit）",
+                    "index": "3"
+                },
+                "FT光（FTC）": {
+                    "label": "FT光（FTC）",
+                    "index": "1"
+                },
+                "ひかり速トク（IFN）": {
+                    "label": "ひかり速トク（IFN）",
+                    "index": "0"
+                }
+            },
+            "defaultValue": ""
+        },
+        "工事予定時間帯": {
+            "type": "DROP_DOWN",
+            "code": "工事予定時間帯",
+            "label": "工事予定時間帯",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "14:00～16:00": {
+                    "label": "14:00～16:00",
+                    "index": "3"
+                },
+                "午後フリー": {
+                    "label": "午後フリー",
+                    "index": "1"
+                },
+                "12:00～14:00": {
+                    "label": "12:00～14:00",
+                    "index": "2"
+                },
+                "16:00～18:00": {
+                    "label": "16:00～18:00",
+                    "index": "4"
+                },
+                "午前フリー": {
+                    "label": "午前フリー",
+                    "index": "0"
+                }
+            },
+            "defaultValue": ""
+        },
+        "code_1": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "code_1",
+            "label": "申込者_番地",
+            "noLabel": false,
+            "required": true,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "group_shiharai": {
+            "type": "GROUP",
+            "code": "group_shiharai",
+            "label": "12.支払情報",
+            "noLabel": false,
+            "openGroup": false
+        },
+        "作成者": {
+            "type": "CREATOR",
+            "code": "作成者",
+            "label": "作成者",
+            "noLabel": false
+        },
+        "キャンペーン": {
+            "type": "CHECK_BOX",
+            "code": "キャンペーン",
+            "label": "キャンペーン",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "FT光スマホ内線化キャンペーン割引": {
+                    "label": "FT光スマホ内線化キャンペーン割引",
+                    "index": "1"
+                },
+                "FT光月額最大6ヶ月無料": {
+                    "label": "FT光月額最大6ヶ月無料",
+                    "index": "0"
+                }
+            },
+            "defaultValue": [],
+            "align": "VERTICAL"
+        },
+        "更新日時": {
+            "type": "UPDATED_TIME",
+            "code": "更新日時",
+            "label": "更新日時",
+            "noLabel": false
+        },
+        "法人_個人": {
+            "type": "RADIO_BUTTON",
+            "code": "法人_個人",
+            "label": "個人/法人",
+            "noLabel": false,
+            "required": true,
+            "options": {
+                "個人": {
+                    "label": "個人",
+                    "index": "0"
+                },
+                "法人": {
+                    "label": "法人",
+                    "index": "1"
+                }
+            },
+            "defaultValue": "個人",
+            "align": "HORIZONTAL"
+        },
+        "オプション_追加廃止": {
+            "type": "SUBTABLE",
+            "code": "オプション_追加廃止",
+            "noLabel": true,
+            "label": "オプション_追加廃止",
+            "fields": {
+                "追加廃止_オプション": {
+                    "type": "DROP_DOWN",
+                    "code": "追加廃止_オプション",
+                    "label": "オプション",
+                    "noLabel": false,
+                    "required": false,
+                    "options": {
+                        "ダブルチャネル": {
+                            "label": "ダブルチャネル",
+                            "index": "8"
+                        },
+                        "プレミアムTV（ホ リデー980）": {
+                            "label": "プレミアムTV（ホリデー980）",
+                            "index": "36"
+                        },
+                        "ナンバー・ディスプレイ": {
+                            "label": "ナンバー・ディスプレイ",
+                            "index": "0"
+                        },
+                        "フリーアクセス・ネクスト": {
+                            "label": "フリーアクセス・ネクスト",
+                            "index": "13"
+                        },
+                        "無線LANカード（レンタル）": {
+                            "label": "無線LANカード（レンタル）",
+                            "index": "24"
+                        },
+                        "ナンバー・リクエスト": {
+                            "label": "ナンバー・リクエスト",
+                            "index": "1"
+                        },
+                        "キャッチホン": {
+                            "label": "キャッチホン",
+                            "index": "2"
+                        },
+                        "ホームゲートウェイ": {
+                            "label": "ホームゲートウェイ",
+                            "index": "22"
+                        },
+                        "スマホ de ひかり電話": {
+                            "label": "スマホ de ひかり電話",
+                            "index": "16"
+                        },
+                        "リモートサポート": {
+                            "label": "リモートサポート",
+                            "index": "17"
+                        },
+                        "Bizひかりクラウド": {
+                            "label": "Bizひかりクラウド",
+                            "index": "23"
+                        },
+                        "迷惑電話おことわりサービス": {
+                            "label": "迷惑電話おことわりサービス",
+                            "index": "4"
+                        },
+                        "BizDatabank（100ＧB)": {
+                            "label": "BizDatabank（100ＧB)",
+                            "index": "32"
+                        },
+                        "オンラインパソコン教室": {
+                            "label": "オンラインパソコン教室",
+                            "index": "21"
+                        },
+                        "テレビ電話": {
+                            "label": "テレビ電話",
+                            "index": "10"
+                        },
+                        "ひかり安心パック": {
+                            "label": "ひかり安心パック",
+                            "index": "27"
+                        },
+                        "マイナンバー": {
+                            "label": "マイナンバー",
+                            "index": "7"
+                        },
+                        "MATSUKAZE-TUNE（Windows安定・高速化ソフト）": {
+                            "label": "MATSUKAZE-TUNE（Windows安定・高 速化ソフト）",
+                            "index": "29"
+                        },
+                        "コールセレクト": {
+                            "label": "コールセレクト",
+                            "index": "15"
+                        },
+                        "メールアドレス（1アカウントの追加）": {
+                            "label": "メールアドレス（1アカウントの追加）",
+                            "index": "30"
+                        },
+                        "フレッツ・V6オプション": {
+                            "label": "フレッツ・V6オプション",
+                            "index": "19"
+                        },
+                        "BizDatabank（50ＧB)": {
+                            "label": "BizDatabank（50ＧB)",
+                            "index": "31"
+                        },
+                        "フレッツナンバー通知機能": {
+                            "label": "フレッツナンバー通知機能",
+                            "index": "20"
+                        },
+                        "着信お知らせメール": {
+                            "label": "着信お知らせメール",
+                            "index": "5"
+                        },
+                        "ネットサポート": {
+                            "label": "ネットサポート",
+                            "index": "26"
+                        },
+                        "ボイスワープ": {
+                            "label": "ボイスワープ",
+                            "index": "3"
+                        },
+                        "1ギガ対応無線LANルータ（レンタル）": {
+                            "label": "1ギガ対応無線LANルータ（レンタル）",
+                            "index": "25"
+                        },
+                        "フリーアクセス・ひかりワイド": {
+                            "label": "フ リーアクセス・ひかりワイド",
+                            "index": "12"
+                        },
+                        "FAXお知らせメール": {
+                            "label": "FAXお知らせメール",
+                            "index": "6"
+                        },
+                        "レンタルフォン500": {
+                            "label": "レンタル フォン500",
+                            "index": "34"
+                        },
+                        "BizDatabank（追加50ＧB)": {
+                            "label": "BizDatabank（追加50ＧB)",
+                            "index": "33"
+                        },
+                        "高音質電話": {
+                            "label": "高音質電話",
+                            "index": "11"
+                        },
+                        "WEBROOT（セキュリティソフトの1ライセンス追加）": {
+                            "label": "WEBROOT（セキュリティソフトの1ライセンス追加）",
+                            "index": "28"
+                        },
+                        "データコネクト": {
+                            "label": "データコネクト",
+                            "index": "9"
+                        },
+                        "ひかり電話＃ダイヤル": {
+                            "label": "ひかり電話＃ダイヤル",
+                            "index": "14"
+                        },
+                        "レンタルフォン980": {
+                            "label": "レンタルフォン980",
+                            "index": "35"
+                        },
+                        "フレッツ・テレビ電送サービス": {
+                            "label": "フレッツ・テレビ電送サービス",
+                            "index": "18"
+                        }
+                    },
+                    "defaultValue": ""
+                },
+                "追加廃止_オプション解約日": {
+                    "type": "DATE",
+                    "code": "追加廃止_オプション解約日",
+                    "label": "オプション_解約日",
+                    "noLabel": false,
+                    "required": false,
+                    "unique": false,
+                    "defaultValue": "",
+                    "defaultNowValue": false
+                },
+                "追加廃止_オプション備考": {
+                    "type": "SINGLE_LINE_TEXT",
+                    "code": "追加廃止_オプション備考",
+                    "label": "オ プション_備考",
+                    "noLabel": false,
+                    "required": false,
+                    "minLength": "",
+                    "maxLength": "",
+                    "expression": "",
+                    "hideExpression": false,
+                    "unique": false,
+                    "defaultValue": ""
+                },
+                "追加廃止_オプション追加日": {
+                    "type": "DATE",
+                    "code": "追加廃止_オプション追加日",
+                    "label": "オプション_追加日",
+                    "noLabel": false,
+                    "required": false,
+                    "unique": false,
+                    "defaultValue": "",
+                    "defaultNowValue": false
+                }
+            }
+        },
+        "工事日投入作業日": {
+            "type": "DATETIME",
+            "code": "工事日投入作業日",
+            "label": "工事日投入作業日時",
+            "noLabel": false,
+            "required": false,
+            "unique": false,
+            "defaultValue": "",
+            "defaultNowValue": false
+        },
+        "P担当者CD": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "P担当者CD",
+            "label": "P担当者CD（ソリューション）",
+            "noLabel": false,
+            "required": false,
+            "lookup": null
+        },
+        "前確担当者CD": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "前確担当者CD",
+            "label": "前確担当者CD（ネットワーク）",
+            "noLabel": false,
+            "required": false,
+            "lookup": null
+        },
+        "postcode_1": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "postcode_1",
+            "label": "申込者郵便番号",
+            "noLabel": false,
+            "required": true,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "town_3": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "town_3",
+            "label": "設置場所_市区町村",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "town_4": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "town_4",
+            "label": "請求先_市区町村",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "town_1": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "town_1",
+            "label": "申込者_市区町村",
+            "noLabel": false,
+            "required": true,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "第二連絡先番号": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "第二連絡先番号",
+            "label": "第二連絡先番号",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "town_2": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "town_2",
+            "label": "開通案内_市区町村",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "前確担 当者名": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "前確担当者名",
+            "label": "前確担当者名（ネットワーク）",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "申込者情報": {
+            "type": "GROUP",
+            "code": "申込者情報",
+            "label": "5.申込者情報",
+            "noLabel": false,
+            "openGroup": true
+        },
+        "no_hyphen_m": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "no_hyphen_m",
+            "label": "日中連絡先(携帯)(ハ イフンなし)",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "NTT注文入力担当者名": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "NTT注文入力担当者名",
+            "label": "NTT注文S　入力担当者名",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "問合せステータス": {
+            "type": "DROP_DOWN",
+            "code": "問合せステータス",
+            "label": "問合せステータス",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "共有：営業へ報告のみ(対応不要)": {
+                    "label": "共有：営業へ報告のみ(対応不要)",
+                    "index": "4"
+                },
+                "苦情：営業で対応完了(要ガルーン)": {
+                    "label": "苦情：営業で対応完了(要ガルーン)",
+                    "index": "3"
+                },
+                "キャンセル：営業へ報告のみ(対応不要)": {
+                    "label": "キャンセル：営業へ報告のみ(対応不要)",
+                    "index": "5"
+                },
+                "その他(予備2)": {
+                    "label": "その他(予備2)",
+                    "index": "7"
+                },
+                "問合せ：営業で対応完了(営対応コメ入力)": {
+                    "label": "問合せ：営業で対応完了(営対応コメ入力)",
+                    "index": "1"
+                },
+                "その他(予備3)": {
+                    "label": "その 他(予備3)",
+                    "index": "8"
+                },
+                "ネットサポート対応中": {
+                    "label": "ネットサポート対応中",
+                    "index": "6"
+                },
+                "問合せ：営業へ対応依頼(ガルーン不要)": {
+                    "label": "問合せ：営業へ対応依頼(ガルーン不要)",
+                    "index": "0"
+                },
+                "苦情：営業へ対応依頼(要ガルーン)": {
+                    "label": "苦情：営業へ対応依頼(要ガルーン)",
+                    "index": "2"
+                }
+            },
+            "defaultValue": ""
+        },
+        "新規獲得_性別": {
+            "type": "RADIO_BUTTON",
+            "code": "新規獲得_性別",
+            "label": "新規獲得_性別",
+            "noLabel": false,
+            "required": true,
+            "options": {
+                "女": {
+                    "label": "女",
+                    "index": "1"
+                },
+                "男": {
+                    "label": "男",
+                    "index": "0"
+                }
+            },
+            "defaultValue": "男",
+            "align": "HORIZONTAL"
+        },
+        "書面戻り": {
+            "type": "DROP_DOWN",
+            "code": "書面戻り",
+            "label": "書面戻り",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "要住所確認": {
+                    "label": "要住所確認",
+                    "index": "0"
+                }
+            },
+            "defaultValue": ""
+        },
+        "回収コール後ステータス": {
+            "type": "DROP_DOWN",
+            "code": "回収コール後ステータス",
+            "label": "回収コール後ステータス",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "9.その他": {
+                    "label": "9.その他",
+                    "index": "5"
+                },
+                "1.留守（携帯）": {
+                    "label": "1.留守（携帯）",
+                    "index": "0"
+                },
+                "3.CB待ち": {
+                    "label": "3.CB待ち",
+                    "index": "2"
+                },
+                "4.再コール": {
+                    "label": "4.再コール",
+                    "index": "3"
+                },
+                "5.対応完了（回収ステータス変更）": {
+                    "label": "5.対応完了（回収ステータス変更）",
+                    "index": "4"
+                },
+                "2.留守（固定）": {
+                    "label": "2.留守（固定）",
+                    "index": "1"
+                }
+            },
+            "defaultValue": ""
+        },
+        "FTでんき": {
+            "type": "CHECK_BOX",
+            "code": "FTでんき",
+            "label": "FTでんき",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "FTでんき申し込み": {
+                    "label": "FTでんき申し込み",
+                    "index": "0"
+                }
+            },
+            "defaultValue": [],
+            "align": "HORIZONTAL"
+        },
+        "FコールコメNEXT用": {
+            "type": "MULTI_LINE_TEXT",
+            "code": "FコールコメNEXT用",
+            "label": "Fコールコメント欄（NEXT営業用）",
+            "noLabel": false,
+            "required": false,
+            "defaultValue": ""
+        },
+        "開通案内佐川伝票番号": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "開通案内佐川伝票番号",
+            "label": "開通案内_佐川伝票番号",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "19",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "連絡事項": {
+            "type": "REFERENCE_TABLE",
+            "code": "連絡事項",
+            "label": "連絡事項",
+            "noLabel": false,
+            "referenceTable": null
+        },
+        "第三希望日_工事予定時間 帯": {
+            "type": "DROP_DOWN",
+            "code": "第三希望日_工事予定時間帯",
+            "label": "第三希望日_工事予定時間帯",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "午 後フリー": {
+                    "label": "午後フリー",
+                    "index": "1"
+                },
+                "午前フリー": {
+                    "label": "午前フリー",
+                    "index": "0"
+                }
+            },
+            "defaultValue": ""
+        },
+        "工事完了日": {
+            "type": "DATE",
+            "code": "工事完了日",
+            "label": "工事（転用）完了日",
+            "noLabel": false,
+            "required": false,
+            "unique": false,
+            "defaultValue": "",
+            "defaultNowValue": false
+        },
+        "次回コール指定日時": {
+            "type": "DATETIME",
+            "code": "次回コール指定日時",
+            "label": "次回コール指定日時",
+            "noLabel": false,
+            "required": false,
+            "unique": false,
+            "defaultValue": "",
+            "defaultNowValue": false
+        },
+        "日付": {
+            "type": "DATE",
+            "code": "日付",
+            "label": "転用承諾番号　有効期限",
+            "noLabel": false,
+            "required": false,
+            "unique": false,
+            "defaultValue": "",
+            "defaultNowValue": false
+        },
+        "決済情報": {
+            "type": "DROP_DOWN",
+            "code": "決済情報",
+            "label": "決済情報",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "未登録": {
+                    "label": "未登録",
+                    "index": "2"
+                },
+                "オーソリNG": {
+                    "label": "オーソリNG",
+                    "index": "0"
+                },
+                "口座不備": {
+                    "label": "口座不備",
+                    "index": "1"
+                }
+            },
+            "defaultValue": ""
+        },
+        "作業者": {
+            "type": "STATUS_ASSIGNEE",
+            "code": "作業者",
+            "label": "作業者",
+            "enabled": false
+        },
+        "ISPオプション": {
+            "type": "CHECK_BOX",
+            "code": "ISPオプション",
+            "label": "ISPオプション",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "※使用禁止　ひかり速トク安心パック": {
+                    "label": "※使用禁止　ひかり速トク安心パック",
+                    "index": "0"
+                },
+                "初期費用_0円": {
+                    "label": "初期費用_0円",
+                    "index": "1"
+                },
+                "BizDataBank（100GB）": {
+                    "label": "BizDataBank（100GB）",
+                    "index": "5"
+                },
+                "※使用禁止　プレミアムTV（ホリデー980）": {
+                    "label": "※使用禁止　プレミアムTV（ホリデー980）",
+                    "index": "16"
+                },
+                "BizDataBank（追加50GB）": {
+                    "label": "BizDataBank（追加50GB）",
+                    "index": "6"
+                },
+                "ホリデープラン": {
+                    "label": "ホリデープラン",
+                    "index": "13"
+                },
+                "速トクTurbo": {
+                    "label": "速トクTurbo",
+                    "index": "8"
+                },
+                "明細書発行（法人専用）": {
+                    "label": "明細書発行（法人専用）",
+                    "index": "19"
+                },
+                "BizDataBank（50GB）": {
+                    "label": "BizDataBank（50GB）",
+                    "index": "4"
+                },
+                "エンジョイサポート": {
+                    "label": "エンジョイサポート",
+                    "index": "10"
+                },
+                "初期費用_3000円": {
+                    "label": "初期費用_3000円",
+                    "index": "2"
+                },
+                "エンタメプラン": {
+                    "label": "エンタメプラン",
+                    "index": "14"
+                },
+                "安心パック（TOPPA！）": {
+                    "label": "安心パック（TOPPA！）",
+                    "index": "9"
+                },
+                "無 線ルータレンタル": {
+                    "label": "無線ルータレンタル",
+                    "index": "17"
+                },
+                "サポートレスキューネクスト": {
+                    "label": "サポートレスキューネクスト",
+                    "index": "11"
+                },
+                "MATSUKAZE-TUNE": {
+                    "label": "MATSUKAZE-TUNE",
+                    "index": "3"
+                },
+                "明細書発行": {
+                    "label": "明細書発行",
+                    "index": "7"
+                },
+                "IPONEメール残し": {
+                    "label": "IPONEメール残し",
+                    "index": "18"
+                },
+                "くらしあん24": {
+                    "label": "くらしあん24",
+                    "index": "15"
+                },
+                "速トクMart": {
+                    "label": "速トクMart",
+                    "index": "20"
+                },
+                "レスキューリモート": {
+                    "label": "レスキューリモート",
+                    "index": "12"
+                }
+            },
+            "defaultValue": [],
+            "align": "VERTICAL"
+        },
+        "HGW交換時間帯": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "HGW交換時間帯",
+            "label": "HGW交換時間帯",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "postcode": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "postcode",
+            "label": "フレッツ光契約者郵便番号",
+            "noLabel": false,
+            "required": true,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "less": {
+            "type": "GROUP",
+            "code": "less",
+            "label": "非表示",
+            "noLabel": true,
+            "openGroup": false
+        },
+        "携帯キャリア": {
+            "type": "DROP_DOWN",
+            "code": "携帯キャリア",
+            "label": "携帯キャリア",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "その他(営コメに入力)": {
+                    "label": "その他(営コメに入力)",
+                    "index": "4"
+                },
+                "softbank（スマとく／まるトク含む）": {
+                    "label": "softbank（スマとく／まるトク含む）",
+                    "index": "2"
+                },
+                "au": {
+                    "label": "au",
+                    "index": "1"
+                },
+                "docomo": {
+                    "label": "docomo",
+                    "index": "0"
+                },
+                "Ymobile": {
+                    "label": "Ymobile",
+                    "index": "3"
+                }
+            },
+            "defaultValue": ""
+        },
+        "マイナンバーOP2": {
+            "type": "CHECK_BOX",
+            "code": "マイナンバーOP2",
+            "label": "マイナンバーオプション#2",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "着信お知らせメール": {
+                    "label": "着信お知らせメール",
+                    "index": "2"
+                },
+                "ボイスワープ": {
+                    "label": "ボイスワー プ",
+                    "index": "0"
+                },
+                "迷惑電話おことわりサービス": {
+                    "label": "迷惑電話おことわりサービス",
+                    "index": "1"
+                },
+                "FAXお知らせメール": {
+                    "label": "FAXお知らせメー ル",
+                    "index": "3"
+                }
+            },
+            "defaultValue": [],
+            "align": "HORIZONTAL"
+        },
+        "マイナンバーOP3": {
+            "type": "CHECK_BOX",
+            "code": "マイナンバーOP3",
+            "label": "マイナンバー オプション#3",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "着信お知らせメール": {
+                    "label": "着信お知らせメール",
+                    "index": "2"
+                },
+                "ボイスワープ": {
+                    "label": "ボイスワープ",
+                    "index": "0"
+                },
+                "迷惑電話おことわりサービス": {
+                    "label": "迷惑電話おことわりサービス",
+                    "index": "1"
+                },
+                "FAXお知らせメール": {
+                    "label": "FAXお知らせメール",
+                    "index": "3"
+                }
+            },
+            "defaultValue": [],
+            "align": "HORIZONTAL"
+        },
+        "チェックボックス": {
+            "type": "CHECK_BOX",
+            "code": "チェックボックス",
+            "label": "事後キャンセル（当てはまる場合のみチェック）",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "事業者変更（他社⇒自社）キャンセル": {
+                    "label": "事業者変更（他社⇒自社）キャンセル",
+                    "index": "1"
+                },
+                "転用後キャンセル": {
+                    "label": "転用後キャンセル",
+                    "index": "0"
+                }
+            },
+            "defaultValue": [],
+            "align": "HORIZONTAL"
+        },
+        "マイナンバーOP1": {
+            "type": "CHECK_BOX",
+            "code": "マイナンバーOP1",
+            "label": "マイナンバーオプション#1",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "着信お知らせメール": {
+                    "label": "着信お知らせメール",
+                    "index": "2"
+                },
+                "ボイスワープ": {
+                    "label": "ボイスワープ",
+                    "index": "0"
+                },
+                "迷惑電話おことわりサービス": {
+                    "label": "迷惑電話おことわりサービス",
+                    "index": "1"
+                },
+                "FAXお知らせメール": {
+                    "label": "FAXお知らせメール",
+                    "index": "3"
+                }
+            },
+            "defaultValue": [],
+            "align": "HORIZONTAL"
+        },
+        "申込書添付FT光": {
+            "type": "FILE",
+            "code": "申込書添付FT光",
+            "label": "申込書添付欄（FT光用）",
+            "noLabel": false,
+            "required": false,
+            "thumbnailSize": "150"
+        },
+        "マイナンバーOP4": {
+            "type": "CHECK_BOX",
+            "code": "マイナンバーOP4",
+            "label": "マイナンバーオプション#4",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "着信お知らせメール": {
+                    "label": "着信お知らせメール",
+                    "index": "2"
+                },
+                "ボイスワープ": {
+                    "label": "ボイスワープ",
+                    "index": "0"
+                },
+                "迷惑電話おことわりサービス": {
+                    "label": "迷惑電話おことわりサービス",
+                    "index": "1"
+                },
+                "FAXお知らせメール": {
+                    "label": "FAXお知らせメール",
+                    "index": "3"
+                }
+            },
+            "defaultValue": [],
+            "align": "HORIZONTAL"
+        },
+        "新規獲得情報": {
+            "type": "GROUP",
+            "code": "新規獲得情報",
+            "label": "6-2.新規獲得情報（新規獲得の場合入力必須）",
+            "noLabel": false,
+            "openGroup": false
+        },
+        "作成日時": {
+            "type": "CREATED_TIME",
+            "code": "作成日時",
+            "label": "作成日時",
+            "noLabel": false
+        },
+        "birthday": {
+            "type": "DATE",
+            "code": "birthday",
+            "label": "フレッツ光契約者生年月日",
+            "noLabel": false,
+            "required": false,
+            "unique": false,
+            "defaultValue": "",
+            "defaultNowValue": false
+        },
+        "code": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "code",
+            "label": "契約者_番地",
+            "noLabel": false,
+            "required": true,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "prefecture": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "prefecture",
+            "label": "契約者_都道府県",
+            "noLabel": false,
+            "required": true,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "担 当者情報グループ": {
+            "type": "GROUP",
+            "code": "担当者情報グループ",
+            "label": "3.担当者情報",
+            "noLabel": false,
+            "openGroup": true
+        },
+        "更新者": {
+            "type": "MODIFIER",
+            "code": "更新者",
+            "label": "更新者",
+            "noLabel": false
+        },
+        "携帯電話": {
+            "type": "DROP_DOWN",
+            "code": "携帯電話",
+            "label": "携帯電話",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "要ヒアリング": {
+                    "label": "要ヒアリング",
+                    "index": "0"
+                }
+            },
+            "defaultValue": ""
+        },
+        "転用情報_支店コード": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "転用情報_支店コード",
+            "label": "転用_支店コード（口座振替）",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "店所名": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "店所名",
+            "label": "店所名",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "電話網変更": {
+            "type": "CHECK_BOX",
+            "code": "電話網変更",
+            "label": "電話網変更（速トク）",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "変更あり": {
+                    "label": "変更あり",
+                    "index": "0"
+                }
+            },
+            "defaultValue": [],
+            "align": "HORIZONTAL"
+        },
+        "tenyou_jouhou": {
+            "type": "GROUP",
+            "code": "tenyou_jouhou",
+            "label": "2.転用承諾番号発行情報",
+            "noLabel": false,
+            "openGroup": false
+        },
+        "品目変更前サービス名": {
+            "type": "DROP_DOWN",
+            "code": "品目変更前サービス名",
+            "label": "品目変更前サービス名（速トク用 ）",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "フレッツ光ライト ファミリータイプ": {
+                    "label": "フレッツ光ライト ファミリータイプ",
+                    "index": "0"
+                },
+                "フレッツ光ライト マンションタイプ": {
+                    "label": "フレッツ光ライト マンションタイプ",
+                    "index": "1"
+                }
+            },
+            "defaultValue": ""
+        },
+        "uniq_no": {
+            "type": "RECORD_NUMBER",
+            "code": "uniq_no",
+            "label": "事業者受付番号",
+            "noLabel": false
+        },
+        "備考2": {
+            "type": "MULTI_LINE_TEXT",
+            "code": "備考2",
+            "label": "備考2",
+            "noLabel": false,
+            "required": false,
+            "defaultValue": ""
+        },
+        "備考3": {
+            "type": "MULTI_LINE_TEXT",
+            "code": "備考3",
+            "label": "備考3（本社以外入力禁止）",
+            "noLabel": false,
+            "required": false,
+            "defaultValue": ""
+        },
+        "building_1": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "building_1",
+            "label": "申込者_マンション名・部屋番号",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "building_2": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "building_2",
+            "label": "開通案内_マンション名・部屋番号",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "ひかり電話工事費": {
+            "type": "CHECK_BOX",
+            "code": "ひかり電話工事費",
+            "label": "ひかり電話工事費",
+            "noLabel": false,
+            "required": false,
+            "options": {
+                "オプション変更_2､000円(お客様承諾済み)": {
+                    "label": "オプション変更_2､000円(お客様承諾済み)",
+                    "index": "1"
+                },
+                "プラン変更_2､000円(お客様承諾済み)": {
+                    "label": "プラン変更_2､000円(お客様承諾済み)",
+                    "index": "0"
+                },
+                "プラン・オプション変更_2､000円(お客様承諾済み)": {
+                    "label": "プラン・オプション変更_2､000円(お客様承諾済み)",
+                    "index": "2"
+                }
+            },
+            "defaultValue": [],
+            "align": "VERTICAL"
+        },
+        "building_3": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "building_3",
+            "label": "設置場所_マンション名・部屋番号",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "building_4": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "building_4",
+            "label": "請求先_マンション名・部屋番号",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "契約者情報備考欄": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "契約者情報備考欄",
+            "label": "契約者情報備考欄",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "開通案内情報": {
+            "type": "GROUP",
+            "code": "開通案内情報",
+            "label": "7.開通案内情報",
+            "noLabel": false,
+            "openGroup": false
+        },
+        "携帯電話番号6_2": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "携帯電話番号6_2",
+            "label": "携帯電話番号（ハイフンあり）",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "group_kouji": {
+            "type": "GROUP",
+            "code": "group_kouji",
+            "label": "11.工事情報",
+            "noLabel": false,
+            "openGroup": false
+        },
+        "文字列__1行__0": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "文字列__1行__0",
+            "label": "口座管理ID",
+            "noLabel": false,
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "contractor_reading": {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "contractor_reading",
+            "label": "フレッツ光契約者名カナ",
+            "noLabel": false,
+            "required": true,
+            "minLength": "",
+            "maxLength": "",
+            "expression": "",
+            "hideExpression": false,
+            "unique": false,
+            "defaultValue": ""
+        },
+        "日付_5": {
+            "type": "DATE",
+            "code": "日付_5",
+            "label": "解約お申し出日",
+            "noLabel": false,
+            "required": false,
+            "unique": false,
+            "defaultValue": "",
+            "defaultNowValue": false
+        },
+        "日付_1": {
+            "type": "DATE",
+            "code": "日付_1",
+            "label": "事業者変更 （自社⇒他社）承諾番号　有効期限",
+            "noLabel": false,
+            "required": false,
+            "unique": false,
+            "defaultValue": "",
+            "defaultNowValue": false
+        },
+        "日付_0": {
+            "type": "DATE",
+            "code": "日付_0",
+            "label": "事業者変更（他社⇒自社）承諾番号　有効期限",
+            "noLabel": false,
+            "required": false,
+            "unique": false,
+            "defaultValue": "",
+            "defaultNowValue": false
+        },
+        "日付_3": {
+            "type": "DATE",
+            "code": "日付_3",
+            "label": "事業者変更後（自社⇒他社）のキャンセル承諾番号　有効期限",
+            "noLabel": false,
+            "required": false,
+            "unique": false,
+            "defaultValue": "",
+            "defaultNowValue": false
+        },
+        "日付_2": {
+            "type": "DATE",
+            "code": "日付_2",
+            "label": "事業者変更後（他社⇒自社）のキャンセル承諾番号　有効期限",
+            "noLabel": false,
+            "required": false,
+            "unique": false,
+            "defaultValue": "",
+            "defaultNowValue": false
+        }
+    }
+}
