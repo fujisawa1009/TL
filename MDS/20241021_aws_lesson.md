@@ -1,7 +1,4 @@
 ■項目
-・
-・
-・
 Developer Associate や SysOps Administrator Associate を受ける予定の方は、
 まずSolutions Architect Associateに合格してから次の試験に向かうと、少しお得
 Solutions Architect Associate に合格すると、AWSの模擬試験を無料で受けれる。
