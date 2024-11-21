@@ -16,6 +16,6 @@ https://cloud-license.com/exam/
 下記サイトのみで、合格することができた。（サイトの問題を3,4周した）
 https://aws.koiwaclub.com/
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-■
+■test
 
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
