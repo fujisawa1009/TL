@@ -5,13 +5,18 @@ output_file = 'output.txt' # 置換後の出力ファイル
 # ファイルを読み込み、内容を置換
 File.open(output_file, 'w') do |out_file|
   File.foreach(input_file) do |line|
-    # 正規表現による置換処理
-    result = line.gsub(/INSERT\s+\[([^\]]+)\]\.\[([^\]]+)\]\s+\(\s*(.*?)\s*\)/) do
-      table_schema = $1
-      table_name = $2
-      columns = $3.gsub(/\[([^\]]+)\]/, '`\1`') # カラム名の角括弧をバッククォートに置換
-      "INSERT INTO `#{table_schema}`.`#{table_name}` (#{columns})"
-    end
+    # SET IDENTITY_INSERT構文を削除
+    next if line =~ /SET\s+IDENTITY_INSERT/i
+
+    # INSERT文の形式を置換 (スキーマ名を削除してテーブル名のみを残す)
+    result = line.gsub(/INSERT\s+\[[^\]]+\]\.\[([^\]]+)\]/, 'INSERT INTO `\1`')
+
+    # Unicode文字列 (N'...') をシングルクォート形式に置換
+    result.gsub!(/N'([^']*)'/, "'\\1'")
+
+    # CAST(0x...) を '2004-03-01 00:00:00' 形式に置換
+    result.gsub!(/CAST\(0x[0-9A-Fa-f]+\s+AS\s+DateTime\)/, "'2004-03-01 00:00:00'")
+
     # 置換後の結果を書き出し
     out_file.puts(result)
   end
