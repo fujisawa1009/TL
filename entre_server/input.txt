@@ -1,0 +1,12 @@
+/****** Object:  Table [entre].[社内アカウント]    Script Date: 11/26/2024 09:37:42 ******/
+SET IDENTITY_INSERT [entre].[社内アカウント] ON
+INSERT [entre].[社内アカウント] ([ID], [名称], [アクセス先・アクセス方法], [IDE], [パスワード], [説明], [種類], [DEL]) VALUES (1, N'VPN接続ID&パスワード（アントレステージ）', N'ＩＰアドレス：219.127.212.150', N'user_etp', N'dv3b4fca', N'アントレステージ専用サーバー接続（アントレ接続用）', N'アントレステージ', 0)
+INSERT [entre].[社内アカウント] ([ID], [名称], [アクセス先・アクセス方法], [IDE], [パスワード], [説明], [種類], [DEL]) VALUES (2, N'アントレステージＦＴＰサーバー', N'ＶＰＮ接続後、接続。
+接続先サーバ名
+192.168.40.148', N'user_etp', N'y%9g:Hr2', N'アントレステージＷｅｂサイト用ＦＴＰアカウント', N'アントレステージ', 1)
+INSERT [entre].[社内アカウント] ([ID], [名称], [アクセス先・アクセス方法], [IDE], [パスワード], [説明], [種類], [DEL]) VALUES (3, N'Googleアナライザー用Googleアカウント', N'https://www.google.com/analytics', N'y-yamamoto@entre-preneur.co.jp', N'15milk', N'アクセス解析の詳細は「ホームページ関連.mdb」に記載', N'アントレステージ', 0)
+
+/****** Object:  Table [entre].[ライセンスシート]    Script Date: 11/26/2024 09:37:42 ******/
+INSERT [entre].[ライセンスシート] ([ライセンス名], [ライセンス数], [単価（税込み）], [総額（税込み）], [取得年月日], [更新日], [備考]) VALUES (N'Macromedia Dreamweaver8', 1, 0, 0, CAST(0x0000985800000000 AS DateTime), CAST(0x0000985800000000 AS DateTime), N'シリアルNo：DWD800-07933-97254-85917　　　　買い切り（更新無し）')
+INSERT [entre].[ライセンスシート] ([ライセンス名], [ライセンス数], [単価（税込み）], [総額（税込み）], [取得年月日], [更新日], [備考]) VALUES (N'Microsft WindowsXP professional', 3, 0, 0, CAST(0x000096F300000000 AS DateTime), CAST(0x0000985900000000 AS DateTime), N'ライセンスキー：MQK3D-HGVFD-9KM76-22888-HRTDG')
+INSERT [entre].[ライセンスシート] ([ライセンス名], [ライセンス数], [単価（税込み）], [総額（税込み）], [取得年月日], [更新日], [備考]) VALUES (N'Microsoft Office2003 professional', 48, 0, 0, NULL, NULL, N'ライセンスキー：QM9JR-8YCWD-6GW9X-38M6T-4Q3HM')
