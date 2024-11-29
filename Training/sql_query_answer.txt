@@ -1,73 +1,176 @@
 -- 基本操作
 -- 1. MySQLサーバーにログインするコマンドを記述する。
+mysql -u root -p
+
 -- 2. 利用可能なデータベースを表示するクエリを記述する。
+SHOW DATABASES;
+
 -- 3. データベース `school` を作成するクエリを記述する。
+CREATE DATABASE school;
+
 -- 4. データベース `school` を使用するクエリを記述する。
+USE school;
 
 -- テーブル操作
 -- 5. `students` テーブルを作成し、`id` (INT, 主キー), `name` (VARCHAR), `age` (INT) を含む。
+CREATE TABLE students (
+    id INT PRIMARY KEY,
+    name VARCHAR(50),
+    age INT
+);
+
 -- 6. `students` テーブルにデータを1件挿入する (`id=1, name='Alice', age=20`)。
+INSERT INTO students (id, name, age) VALUES (1, 'Alice', 20);
+
 -- 7. `students` テーブルのすべてのデータを取得する。
+SELECT * FROM students;
+
 -- 8. テーブルに列 `gender` (VARCHAR) を追加する。
+ALTER TABLE students ADD gender VARCHAR(10);
+
 -- 9. 列 `gender` のデータ型を変更して ENUM('male', 'female') にする。
+ALTER TABLE students MODIFY gender ENUM('male', 'female');
+
 -- 10. テーブルの名前を `classmates` に変更する。
+ALTER TABLE students RENAME TO classmates;
+
 -- 11. テーブルを削除する。
+DROP TABLE classmates;
 
 -- データ挿入と更新
 -- 12. テーブル `students` を再作成し、データを複数行一括挿入する。
+INSERT INTO students (id, name, age, gender) 
+VALUES (1, 'Alice', 20, 'female'), 
+       (2, 'Bob', 22, 'male'), 
+       (3, 'Charlie', 19, 'male');
+
 -- 13. 学生の名前 `Alice` の年齢を21に更新する。
+UPDATE students SET age = 21 WHERE name = 'Alice';
+
 -- 14. `students` テーブルのすべてのデータを削除する。
+DELETE FROM students;
+
 -- 15. 特定の条件 (`age > 18`) に一致する行を削除する。
+DELETE FROM students WHERE age > 18;
 
 -- データ取得 (SELECT)
 -- 16. 学生の名前を昇順で取得するクエリを記述する。
+SELECT name FROM students ORDER BY name ASC;
+
 -- 17. 学生の年齢の平均値を取得する。
+SELECT AVG(age) AS average_age FROM students;
+
 -- 18. 年齢が最大の学生を取得する。
+SELECT * FROM students WHERE age = (SELECT MAX(age) FROM students);
+
 -- 19. `age` が 20 の学生を取得する。
+SELECT * FROM students WHERE age = 20;
+
 -- 20. `name` に `A` を含む学生を取得する。
+SELECT * FROM students WHERE name LIKE '%A%';
+
 -- 21. `gender` が 'female' の学生数をカウントする。
+SELECT COUNT(*) AS female_count FROM students WHERE gender = 'female';
+
 -- 22. `gender` 別に学生をグループ化し、それぞれの人数を表示する。
+SELECT gender, COUNT(*) AS count FROM students GROUP BY gender;
+
 -- 23. 重複した名前を削除して表示する。
+SELECT DISTINCT name FROM students;
 
 -- 条件付き取得
 -- 24. 学生の名前と年齢を、`age` が 18 以上の学生だけ取得する。
+SELECT name, age FROM students WHERE age >= 18;
+
 -- 25. `age` が 18 と 25 の間の学生を取得する。
+SELECT * FROM students WHERE age BETWEEN 18 AND 25;
+
 -- 26. 条件を OR で結合して、名前が 'Alice' または年齢が 20 の学生を取得する。
+SELECT * FROM students WHERE name = 'Alice' OR age = 20;
 
 -- JOIN
 -- 27. `classes` テーブル (id, name) を作成する。
+CREATE TABLE classes (
+    id INT PRIMARY KEY,
+    name VARCHAR(50)
+);
+
 -- 28. `students` に列 `class_id` を追加する。
+ALTER TABLE students ADD class_id INT;
+
 -- 29. `students` と `classes` を結合して、クラス名と学生名を取得する。
+SELECT students.name AS student_name, classes.name AS class_name
+FROM students
+INNER JOIN classes ON students.class_id = classes.id;
+
 -- 30. LEFT JOIN を使用してすべてのクラスとその学生を取得する。
+SELECT classes.name AS class_name, students.name AS student_name
+FROM classes
+LEFT JOIN students ON classes.id = students.class_id;
 
 -- 集約関数とサブクエリ
 -- 31. 各クラスの平均年齢を取得する。
+SELECT class_id, AVG(age) AS average_age FROM students GROUP BY class_id;
+
 -- 32. 年齢が平均より高い学生を取得する。
+SELECT * FROM students WHERE age > (SELECT AVG(age) FROM students);
+
 -- 33. サブクエリを使用して、最も若い学生を取得する。
+SELECT * FROM students WHERE age = (SELECT MIN(age) FROM students);
 
 -- インデックスと制約
 -- 34. `students` テーブルの `name` 列にインデックスを追加する。
+CREATE INDEX idx_name ON students(name);
+
 -- 35. `class_id` 列に外部キー制約を追加する。
+ALTER TABLE students ADD CONSTRAINT fk_class FOREIGN KEY (class_id) REFERENCES classes(id);
+
 -- 36. 外部キー制約を削除する。
+ALTER TABLE students DROP FOREIGN KEY fk_class;
 
 -- トランザクション
 -- 37. トランザクションを開始し、データを挿入する。
+START TRANSACTION;
+INSERT INTO students (id, name, age, gender) VALUES (4, 'David', 23, 'male');
+
 -- 38. トランザクションをロールバックする。
+ROLLBACK;
+
 -- 39. トランザクションをコミットする。
+COMMIT;
 
 -- ユーザーと権限
 -- 40. `user1` という新しいユーザーを作成し、パスワードを設定する。
+CREATE USER 'user1'@'localhost' IDENTIFIED BY 'password';
+
 -- 41. `school` データベースへの SELECT 権限を `user1` に付与する。
+GRANT SELECT ON school.* TO 'user1'@'localhost';
+
 -- 42. `user1` の権限をリボークする。
+REVOKE SELECT ON school.* FROM 'user1'@'localhost';
 
 -- 応用クエリ
 -- 43. 学生数が 2 人以上のクラスを取得する。
+SELECT class_id, COUNT(*) AS student_count FROM students GROUP BY class_id HAVING COUNT(*) >= 2;
+
 -- 44. テーブル `students` を CSV ファイルにエクスポートする。
+SELECT * FROM students INTO OUTFILE '/tmp/students.csv' FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n';
+
 -- 45. CSV ファイルからデータを `students` テーブルにインポートする。
+LOAD DATA INFILE '/tmp/students.csv' INTO TABLE students FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n';
+
 -- 46. データベースのバックアップを取得する。
+mysqldump -u root -p school > school_backup.sql
+
 -- 47. 特定のテーブルを復元する。
+mysql -u root -p school < school_backup.sql
 
 -- その他
 -- 48. テーブル `students` の構造を確認する。
+DESCRIBE students;
+
 -- 49. MySQL のバージョンを確認する。
+SELECT VERSION();
+
 -- 50. すべてのデータベースを削除するクエリを記述する。
+DROP DATABASE school;
