@@ -12,6 +12,8 @@ File.open(output_file, 'w') do |out_file|
     next if line.strip.start_with?('GO')
     next if line.strip =~ /^print\s+'[^']*'/i
     next if line.strip =~ /^\/\*+.*\*+\/$/ # コメント行をスキップ (例: "/* ... */")
+    next if line.strip =~ /SET\s+IDENTITY_INSERT/i # SET IDENTITY_INSERT構文をスキップ
+
     
     # INSERT文の開始または継続を判定
     if line =~ /^INSERT\s/i
