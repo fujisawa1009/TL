@@ -1,0 +1,12 @@
+# Rails
+/.bundle
+/log/*
+/tmp/*
+/db/*.sqlite3
+/public/assets
+.byebug_history
+
+# OSファイル
+.DS_Store
+Thumbs.db
+entre_server/input_system.sql

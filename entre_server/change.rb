@@ -14,12 +14,15 @@ File.open(output_file, 'w') do |out_file|
     next if line.strip =~ /^\/\*+.*\*+\/$/ # コメント行をスキップ (例: "/* ... */")
     next if line.strip =~ /SET\s+IDENTITY_INSERT/i # SET IDENTITY_INSERT構文をスキップ
 
-    
     # INSERT文の開始または継続を判定
     if line =~ /^INSERT\s/i
       current_insert += " #{line.strip}"
     elsif !current_insert.empty?
       current_insert += " #{line.strip}"
+    else
+      # INSERT文の途中でない場合はそのまま出力
+      puts "上記以外の場合: #{line}"
+      next  
     end
 
     # 行がINSERT文の末尾か判定（例: ) が閉じている）
