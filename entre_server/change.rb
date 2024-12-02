@@ -1,5 +1,5 @@
 # 入力ファイルと出力ファイルのパス
-input_file = 'input_system_non_newline.sql'
+input_file = 'input_system.sql'
 output_file = 'output_system_non_newline.sql'
 
 # 一時的にINSERT文を蓄積する変数
@@ -38,7 +38,7 @@ File.open(output_file, 'w') do |out_file|
       current_insert = '' # バッファをリセット
     else
       # INSERT文の途中の場合はそのまま出力
-      pp line
+      # pp line
     end
   end
 end
