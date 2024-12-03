@@ -1,7 +1,16 @@
-■バックアップ取得
+■バックアップ
 docker exec -it php8.2_db bash
 mysqldump -u root -p --all-databases > 20241127_backup.sql
 docker cp php8.2_db:/20241127_backup.sql /var/develop/dockers/php8.2/
+
+■sqlファイル実行
+# 事前にinput_system.sqlファイルはnkfで変換が必要
+nkf -w --overwrite input_system.sql
+#　docker環境にコピー
+docker cp /var/develop/dockers/ruby/TL/entre_server/output_system.sql php8.2_db:/
+#　docker環境に入ってsqlファイル実行
+docker exec -it php8.2_db bash
+mysql -u root -p System < 20241203_output_system.sql
 
 ■置換についての内容(change.rb)
 ・先に不要な行のパターンにマッチする場合は行ごと削除する。
@@ -16,8 +25,6 @@ docker cp php8.2_db:/20241127_backup.sql /var/develop/dockers/php8.2/
   -  N'...'を'...'へ置換
   -  CAST(0x...) を日付に置換
   -  ファイルに出力してバッファをリセットする
-
-
 
 事前準備として
 ・INSERT文を角括弧をバッククオートに置換
