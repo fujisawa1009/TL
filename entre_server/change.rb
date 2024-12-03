@@ -24,7 +24,6 @@ def hex_to_datetime(hex_value)
   datetime_value.strftime('%Y-%m-%dT%H:%M:%S')
 end
 
-
 File.open(output_file, 'w') do |out_file|
   File.foreach(input_file) do |line|
     line.strip!

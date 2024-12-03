@@ -10,3 +10,4 @@
 .DS_Store
 Thumbs.db
 entre_server/input_system.sql
+entre_server/output_system.sql
