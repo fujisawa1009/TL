@@ -10,7 +10,7 @@ nkf -w --overwrite output_system.sql
 docker cp /var/develop/dockers/ruby/TL/entre_server/output_system.sql php8.2_db:/
 #　docker環境に入ってsqlファイル実行
 docker exec -it php8.2_db bash
-mysql -u root -p System < output_system.sql
+mysql -u root -p System < test_output_system.sql
 
 ■置換についての内容(change.rb)
 ・先に不要な行のパターンにマッチする場合は行ごと削除する。
@@ -31,3 +31,14 @@ mysql -u root -p System < output_system.sql
 ・SET IDENTITY_INSERT構文の削除
 ・N'...'を単純なシングルクォート形式の文字列に置換
 ・CAST(0x0000985800000000 AS DateTime)を'2004-03-01 00:00:00'形式に置換
+
+■DBお掃除用クエリ
+-- SELECT * FROM `社内アカウント`;
+DELETE FROM `社内アカウント`;
+-- SELECT * FROM `ライセンスシート`;
+DELETE FROM `ライセンスシート`;
+-- SELECT * FROM `YOUGO`;
+DELETE FROM `YOUGO`;
+DELETE FROM `数値`;
+-- 以下はテーブルかカラムが足りないため確認中
+-- DESCRIBE `YOUGO`;
