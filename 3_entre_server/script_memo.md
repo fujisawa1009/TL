@@ -5,21 +5,16 @@ docker cp php8.2_db:/20241127_backup.sql /var/develop/dockers/php8.2/
 
 ■sqlファイル実行
 # 事前にinput_system.sqlファイルはnkfで変換が必要
-nkf -w --overwrite output_system.sql
+【完了】nkf -w --overwrite output_system.sql
 
-nkf -w --overwrite check_output_system_1.sql
-nkf -w --overwrite check_output_system_2.sql
+
 #　docker環境にコピー
-docker cp /var/develop/dockers/ruby/TL/entre_server/output_system.sql php8.2_db:/
+【完了】docker cp /var/develop/dockers/ruby/TL/entre_server/output_system.sql php8.2_db:/
 
-docker cp /var/develop/dockers/ruby/TL/entre_server/check_output_system_1.sql php8.2_db:/
-docker cp /var/develop/dockers/ruby/TL/entre_server/check_output_system_2.sql php8.2_db:/
 #　docker環境に入ってsqlファイル実行
 docker exec -it php8.2_db bash
-mysql -u root -p System < output_system.sql
+【完了】mysql -u root -p System < output_system.sql
 
-mysql -u root -p System < check_output_system_1.sql
-mysql -u root -p System < check_output_system_2.sql
 
 # エラーは戻って行数指定確認
 awk NR==9610 check_output_system.sql

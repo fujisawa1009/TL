@@ -1,7 +1,7 @@
 require 'date'
 
-input_file = 'input_system.sql'
-output_file = 'output_system.sql'
+input_file = 'input_system2.sql'
+output_file = 'output_system2.sql'
 
 # クォートや括弧のバランスをチェックする関数
 def balanced?(string)
@@ -83,4 +83,5 @@ File.open(output_file, 'w') do |out_file|
 end
 
 puts "置換が完了しました。結果は '#{output_file}' に保存されました。"
+
 
